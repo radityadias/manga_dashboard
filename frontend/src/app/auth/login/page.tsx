@@ -80,7 +80,7 @@ export default function Login() {
                                                 <Link href="#" className="text-sm">Forgot Password?</Link>
                                             </div>
                                             <FormControl>
-                                                <Input placeholder="Enter your password..." {...field}/>
+                                                <Input placeholder="Enter your password..." {...field} type="password"/>
                                             </FormControl>
                                         </FormItem>
                                     )}/>
