@@ -1,7 +1,9 @@
+import HomePage from "@/app/dashboard/home/page";
+
 export default function Page() {
   return (
     <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <HomePage/>
     </div>
   )
 }
