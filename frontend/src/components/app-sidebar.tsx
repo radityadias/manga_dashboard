@@ -1,5 +1,11 @@
 import * as React from "react"
 import { GalleryVerticalEnd } from "lucide-react"
+import Image from "next/image"
+import {
+  HomeIcon,
+  BookmarkIcon,
+  BookIcon,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -19,136 +25,40 @@ import {
 const data = {
   navMain: [
     {
-      title: "Getting Started",
+      title: "Home",
+      icon: HomeIcon,
+      url: "#",
+    },
+    {
+      title: "Saved",
+      icon: BookmarkIcon,
       url: "#",
       items: [
         {
-          title: "Installation",
+          title: "Library",
           url: "#",
         },
         {
-          title: "Project Structure",
+          title: "History",
           url: "#",
-        },
+        }
       ],
     },
     {
-      title: "Building Your Application",
+      title: "Titles",
+      icon: BookIcon,
       url: "#",
       items: [
         {
-          title: "Routing",
+          title: "Advance Search",
           url: "#",
         },
         {
-          title: "Data Fetching",
-          url: "#",
-          isActive: true,
-        },
-        {
-          title: "Rendering",
+          title: "Recommendations",
           url: "#",
         },
         {
-          title: "Caching",
-          url: "#",
-        },
-        {
-          title: "Styling",
-          url: "#",
-        },
-        {
-          title: "Optimizing",
-          url: "#",
-        },
-        {
-          title: "Configuring",
-          url: "#",
-        },
-        {
-          title: "Testing",
-          url: "#",
-        },
-        {
-          title: "Authentication",
-          url: "#",
-        },
-        {
-          title: "Deploying",
-          url: "#",
-        },
-        {
-          title: "Upgrading",
-          url: "#",
-        },
-        {
-          title: "Examples",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "API Reference",
-      url: "#",
-      items: [
-        {
-          title: "Components",
-          url: "#",
-        },
-        {
-          title: "File Conventions",
-          url: "#",
-        },
-        {
-          title: "Functions",
-          url: "#",
-        },
-        {
-          title: "next.config.js Options",
-          url: "#",
-        },
-        {
-          title: "CLI",
-          url: "#",
-        },
-        {
-          title: "Edge Runtime",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Architecture",
-      url: "#",
-      items: [
-        {
-          title: "Accessibility",
-          url: "#",
-        },
-        {
-          title: "Fast Refresh",
-          url: "#",
-        },
-        {
-          title: "Next.js Compiler",
-          url: "#",
-        },
-        {
-          title: "Supported Browsers",
-          url: "#",
-        },
-        {
-          title: "Turbopack",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Community",
-      url: "#",
-      items: [
-        {
-          title: "Contribution Guide",
+          title: "Latest Updates",
           url: "#",
         },
       ],
@@ -164,12 +74,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <a href="#">
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <GalleryVerticalEnd className="size-4" />
-                </div>
+                <Image src="/mangaku_logo.png" alt="mangaku logo" width={75} height={75} />
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-medium">Documentation</span>
-                  <span className="">v1.0.0</span>
+                  <span className="font-medium text-2xl">MangaKu</span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -182,7 +89,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             {data.navMain.map((item) => (
               <SidebarMenuItem key={item.title}>
                 <SidebarMenuButton asChild>
-                  <a href={item.url} className="font-medium">
+                  <a href={item.url} className="font-medium text-lg">
+                    {item.icon && <item.icon />}
                     {item.title}
                   </a>
                 </SidebarMenuButton>
