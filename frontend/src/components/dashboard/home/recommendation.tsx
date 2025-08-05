@@ -1,10 +1,18 @@
 "use client";
 
-import { useState } from 'react';
+import {HTMLAttributes, useState} from 'react';
 // Mocked imports for a self-contained example
-const cn = (...classes) => classes.filter(Boolean).join(' ');
+const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(' ');
 
-const Image = ({ src, alt, width, height, className, ...props }) => {
+interface ImageProps extends HTMLAttributes<HTMLImageElement> {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+    className?: string;
+}
+
+const Image = ({ src, alt, width, height, className, ...props }: ImageProps) => {
     return (
         <img
             src={src}
@@ -16,6 +24,7 @@ const Image = ({ src, alt, width, height, className, ...props }) => {
         />
     );
 };
+
 
 // Mocked data as an array of objects
 const bannerData = [
