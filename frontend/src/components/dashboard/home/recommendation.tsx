@@ -97,7 +97,7 @@ export default function RecommendationsCarousel() {
     const currentItems = bannerData.slice(startIndex, endIndex);
 
     return (
-        <div className="p-6">
+        <div>
             <h2 className="text-2xl font-semibold mb-6 text-gray-800">Recommendations</h2>
 
             {/* Carousel Container */}
@@ -116,7 +116,7 @@ export default function RecommendationsCarousel() {
                             {/* A nested grid to handle the top layout for each recommendation item. */}
                             <div className="grid grid-cols-6 gap-4">
                                 {/* Image container */}
-                                <div className="col-span-3 sm:col-span-1 flex justify-center">
+                                <div className="col-span-3 sm:col-span-2 md:col-span-2 lg:col-span-1 flex justify-center">
                                     <Image
                                         src={item.image}
                                         alt={item.title}
@@ -149,7 +149,6 @@ export default function RecommendationsCarousel() {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     ))}
                 </div>

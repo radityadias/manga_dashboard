@@ -28,6 +28,7 @@ const data = {
       title: "Home",
       icon: HomeIcon,
       url: "#",
+      isActive: true,
     },
     {
       title: "Saved",
@@ -37,10 +38,12 @@ const data = {
         {
           title: "Library",
           url: "#",
+          isActive: false,
         },
         {
           title: "History",
           url: "#",
+          isActive: false,
         }
       ],
     },
@@ -52,14 +55,17 @@ const data = {
         {
           title: "Advance Search",
           url: "#",
+          isActive: false,
         },
         {
           title: "Recommendations",
           url: "#",
+          isActive: false,
         },
         {
           title: "Latest Updates",
           url: "#",
+          isActive: false,
         },
       ],
     },
@@ -110,7 +116,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarRail />
     </Sidebar>
   )
 }

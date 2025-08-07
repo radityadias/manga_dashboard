@@ -1,12 +1,9 @@
 "use client"
 
-import { HTMLAttributes } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import Link from "next/link"; // Adjust the import path as needed
-
-// Helper function to conditionally join Tailwind CSS classes
-const cn = (...classes: (string | undefined | null | false)[]): string =>
-    classes.filter(Boolean).join(' ');
+import { useIsTablet } from "@/hooks/use-Tablet";
+import Link from "next/link";
+import Image from "next/image";
 
 interface UpdateItem {
     image: string;
@@ -16,39 +13,14 @@ interface UpdateItem {
     updated_at: string;
 }
 
-// Image component with responsive object-fit
-interface ImageProps extends HTMLAttributes<HTMLImageElement> {
-    src: string;
-    alt: string;
-    width?: number;
-    height?: number;
-    className?: string;
-}
-
-const Image = ({ src, alt, width, height, className, ...props }: ImageProps) => {
-    return (
-        <img
-            src={src}
-            alt={alt}
-            width={width}
-            height={height}
-            className={cn("object-cover", className)}
-            {...props}
-        />
-    );
-};
-
-// Add props interface for UpdatesColumn component
 interface UpdatesColumnProps {
     data: UpdateItem[];
 }
 
-
-// Main Updates component
 export default function Updates() {
     const isMobile = useIsMobile();
+    const isTablet = useIsTablet();
 
-    // Sample data for updates, mimicking the structure and quantity from the image
     const updatesData = [
         {
             image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Evil+Baby",
@@ -220,15 +192,11 @@ export default function Updates() {
         },
     ];
 
-    // Divide data into four columns, with 5 items per column
     const updatesColumn1 = updatesData.slice(0, 5);
     const updatesColumn2 = updatesData.slice(5, 10);
     const updatesColumn3 = updatesData.slice(10, 15);
-    const updatesColumn4 = updatesData.slice(15, 20); // This will only take up to 20 items
+    const updatesColumn4 = updatesData.slice(15, 20);
 
-    const mobileData = updatesData.slice(0, 5);
-
-    // Component to render a single column of updates
     const UpdatesColumn = ({ data }: UpdatesColumnProps) => (
         <div className="grid grid-rows-5 gap-3 bg-gray-200 p-2 rounded-lg">
             {data.map((item: UpdateItem, index: number) => (
@@ -237,9 +205,9 @@ export default function Updates() {
                         <Image
                             src={item.image}
                             alt={item.title}
-                            width={75}
+                            width={100}
                             height={100}
-                            className="rounded-md w-[75px] h-[100px]"
+                            className="rounded-md object-cover"
                         />
                     </div>
                     <div className="flex flex-col justify-start w-full">
@@ -258,19 +226,23 @@ export default function Updates() {
     );
 
     return (
-        <div className="bg-white text-gray-800 p-6 rounded-lg">
+        <div className="bg-white text-gray-800 rounded-lg">
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-semibold">Latest Updates</h2>
                 <Link href="#" className="text-md font-medium ">See more...</Link>
             </div>
 
-            {/* Conditional rendering based on mobile state */}
             {isMobile ? (
                 <div className="grid grid-cols-1 gap-6">
-                    <UpdatesColumn data={mobileData} />
+                    <UpdatesColumn data={updatesColumn1} />
+                </div>
+            ) : isTablet ? (
+                <div className="grid grid-cols-2 gap-6">
+                    <UpdatesColumn data={updatesColumn1} />
+                    <UpdatesColumn data={updatesColumn2} />
                 </div>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-4 gap-6">
                     <UpdatesColumn data={updatesColumn1} />
                     <UpdatesColumn data={updatesColumn2} />
                     <UpdatesColumn data={updatesColumn3} />

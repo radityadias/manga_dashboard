@@ -2,36 +2,10 @@
 
 import { HTMLAttributes, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-// Re-using the utility function for class names
-const cn = (...classes: (string | undefined | null | false)[]): string =>
-    classes.filter(Boolean).join(' ');
-
-// Extending HTMLAttributes for the image component props
-interface ImageProps extends HTMLAttributes<HTMLImageElement> {
-    src: string;
-    alt: string;
-    width?: number;
-    height?: number;
-    className?: string;
-}
-
-// Simple Image component to handle object-fit
-const Image = ({ src, alt, width, height, className, ...props }: ImageProps) => {
-    return (
-        <img
-            src={src}
-            alt={alt}
-            width={width}
-            height={height}
-            className={cn("object-cover", className)}
-            {...props}
-        />
-    );
-};
+import Link from "next/link";
+import Image from "next/image";
 
 // Interface for manga item data
 interface UpdateItem {
@@ -135,7 +109,7 @@ export default function Randoms() {
                         alt={item.title}
                         width={200}
                         height={250}
-                        className="rounded-md w-[200px] h-[250px] hover:opacity-80 transition-opacity"
+                        className="rounded-md hover:opacity-80 transition-opacity"
                     />
                     <p className="text-sm truncate text-center">{item.title}</p>
                 </div>
@@ -144,7 +118,7 @@ export default function Randoms() {
     );
 
     return (
-        <div className="p-6 relative">
+        <div className="p-6 relative overflow-hidden">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-semibold">Random Manga</h2>
                 <Link href="#" className="text-md font-medium hover:underline">
@@ -156,7 +130,7 @@ export default function Randoms() {
                 <div
                     ref={scrollContainerRef}
                     onScroll={handleScroll}
-                    className="flex gap-5 overflow-x-hidden scroll-smooth pb-4"
+                    className="flex gap-5 pb-4 overflow-x-hidden scroll-smooth"
                 >
                     {updatesData.map((item) => (
                         <MangaCard key={item.id} item={item} />
