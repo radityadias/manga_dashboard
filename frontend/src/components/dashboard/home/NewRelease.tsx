@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 
 interface NewReleaseData {
     id: number;
@@ -103,31 +103,30 @@ export  default  function NewRelease () {
 
     return (
         <>
-            <div className="mb-8">
+            <div className="mb-8 flex justify-between gap-5 ">
+                <div className="w-full">
+                    <h2 className="text-2xl font-semibold">New Release</h2>
+                    <div className="order-1 grid grid-cols-5 gap-3">
+                        {newReleaseData.map((release) => (
+                            <Image
+                                key={release.id}
+                                src={release.image}
+                                alt={release.image}
+                                width={125}
+                                height={150}
+                                className="object-cover w-full h-52 rounded-md"
+                            />
+                        ))}
+                    </div>
+                </div>
 
-                <div className="grid grid-cols-4 gap-6">
-                   <div className="col-span-3">
-                       <h2 className="text-2xl font-semibold mb-6 text-gray-800">New Release</h2>
+                <aside className="order-2 right-0 w-96 h-fit z-40 bg-gray-200 rounded-md">
+                    <h2 className="font-medium text-center p-2">Popular</h2>
 
-                       <div className="grid grid-cols-5 gap-6">
-                           {newReleaseData.map((release) => (
-                               <Image
-                                   key={release.id}
-                                   src={release.image}
-                                   alt={release.title}
-                                   width={75}
-                                   height={100}
-                                   className="object-cover w-full h-48 rounded-md"
-                               />
-                           ))}
-                        </div>
-                   </div>
-                    <div className="col-span-1">
-                        <h2 className="text-xl font-medium mb-6 text-gray-800 text-center">Popular</h2>
-
-                        <div className="grid grid-flow-row p-2 gap-2 max-h-96">
+                    <div className="h-full p-2">
+                        <div className="grid grid-rows-5 gap-2">
                             {popularData.map((popular) => (
-                                <div className="grid grid-cols-3 gap-1">
+                                <div className="grid grid-cols-3 gap-1 h-28" key={popular.id}>
                                     <div className="col-span-1">
                                         <Image
                                             key={popular.id}
@@ -135,7 +134,7 @@ export  default  function NewRelease () {
                                             alt={popular.title}
                                             width={75}
                                             height={100}
-                                            className="object-cover w-full h-28 rounded-md"
+                                            className="object-cover w-full h-full rounded-md"
                                         />
                                     </div>
                                     <div className="col-span-2 flex flex-col gap-1">
@@ -151,8 +150,7 @@ export  default  function NewRelease () {
                             ))}
                         </div>
                     </div>
-                </div>
-
+                </aside>
             </div>
         </>
     )
