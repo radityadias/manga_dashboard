@@ -205,9 +205,9 @@ export default function Updates() {
                         <Image
                             src={item.image}
                             alt={item.title}
-                            width={100}
+                            width={75}
                             height={100}
-                            className="rounded-md object-cover"
+                            className="rounded-md w-24 h-32 object-cover"
                         />
                     </div>
                     <div className="flex flex-col justify-start w-full">
@@ -226,7 +226,7 @@ export default function Updates() {
     );
 
     return (
-        <div className="bg-white text-gray-800 rounded-lg">
+        <div className="bg-white text-gray-800 rounded-lg mb-8">
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-semibold">Latest Updates</h2>
                 <Link href="#" className="text-md font-medium ">See more...</Link>

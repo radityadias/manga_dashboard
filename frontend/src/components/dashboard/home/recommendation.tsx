@@ -1,30 +1,7 @@
 "use client";
 
-import {HTMLAttributes, useState} from 'react';
-// Mocked imports for a self-contained example
-const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(' ');
-
-interface ImageProps extends HTMLAttributes<HTMLImageElement> {
-    src: string;
-    alt: string;
-    width?: number;
-    height?: number;
-    className?: string;
-}
-
-const Image = ({ src, alt, width, height, className, ...props }: ImageProps) => {
-    return (
-        <img
-            src={src}
-            alt={alt}
-            width={width}
-            height={height}
-            className={cn("object-cover", className)}
-            {...props}
-        />
-    );
-};
-
+import { useState } from 'react';
+import Image from 'next/image';
 
 // Mocked data as an array of objects
 const bannerData = [
@@ -122,7 +99,7 @@ export default function RecommendationsCarousel() {
                                         alt={item.title}
                                         width={75}
                                         height={75}
-                                        className="rounded-md w-56 h-64"
+                                        className="rounded-md w-56 h-64 object-cover"
                                     />
                                 </div>
 
@@ -154,8 +131,7 @@ export default function RecommendationsCarousel() {
                 </div>
             </div>
 
-            {/* The Image Control and navigation buttons are now in a separate, centered flex container */}
-            <div className="mt-6 flex justify-center items-center gap-4">
+            <div className="mt-6 flex justify-center items-center gap-4 mb-8">
                 <button
                     onClick={handlePrev}
                     className="p-1 bg-gray-900 text-white rounded-full shadow-lg opacity-75 hover:opacity-100 transition-opacity duration-200"
