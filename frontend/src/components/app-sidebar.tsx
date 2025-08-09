@@ -80,7 +80,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <a href="#">
-                <Image src="/mangaku_logo.png" alt="mangaku logo" width={75} height={75} />
+                <Image
+                    src="/mangaku_logo.png"
+                    alt="mangaku logo"
+                    width={75}
+                    height={75}
+                    className="w-12 h-auto"
+                />
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-medium text-2xl">MangaKu</span>
                 </div>

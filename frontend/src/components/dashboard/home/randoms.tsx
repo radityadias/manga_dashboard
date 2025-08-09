@@ -53,9 +53,8 @@ export default function Randoms() {
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                     {randomData.map((item: RandomData) => (
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col " key={item.id}>
                             <Image
-                                key={item.id}
                                 src={item.image}
                                 alt={item.title}
                                 width={100}
