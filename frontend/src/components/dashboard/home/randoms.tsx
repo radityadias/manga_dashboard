@@ -46,10 +46,11 @@ export default function Randoms() {
     return (
         <>
             <div>
-                <div className="grid grid-cols-2 mb-6">
+                <div className="flex items-center justify-between mb-4">
                     <h2 className="text-2xl font-semibold">Random Manga</h2>
-                    <Link href="#" className="text-md font-medium text-end">See more...</Link>
+                    <Link href="#" className="text-md font-medium">See more...</Link>
                 </div>
+
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                     {randomData.map((item: RandomData) => (
@@ -68,7 +69,7 @@ export default function Randoms() {
                     ))}
                 </div>
 
-                <div className="flex justify-center mt-5">
+                <div className="flex justify-center mt-5 mb-8">
                     <Button variant="ghost">
                         <RefreshCwIcon className="w-5 h-5" />
                         Refresh

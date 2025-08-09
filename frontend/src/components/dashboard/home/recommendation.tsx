@@ -75,7 +75,7 @@ export default function RecommendationsCarousel() {
 
     return (
         <div>
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Recommendations</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Recommendations</h2>
 
             {/* Carousel Container */}
             <div className="relative">

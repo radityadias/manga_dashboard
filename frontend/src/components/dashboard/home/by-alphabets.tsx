@@ -35,7 +35,7 @@ export default function ByAlphabets() {
 
     return (
         <>
-            <div className="w-full">
+            <div className="w-full mb-8">
                 <h2 className="text-2xl font-semibold mb-4">By Alphabets</h2>
                 <div className="flex flex-wrap justify-baseline items-center gap-2">
                     {alphabetData.map((alphabet : string, index : number) => (

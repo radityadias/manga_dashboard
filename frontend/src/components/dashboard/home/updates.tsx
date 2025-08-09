@@ -227,7 +227,7 @@ export default function Updates() {
 
     return (
         <div className="bg-white text-gray-800 rounded-lg mb-8">
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-semibold">Latest Updates</h2>
                 <Link href="#" className="text-md font-medium ">See more...</Link>
             </div>
