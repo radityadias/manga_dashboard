@@ -55,6 +55,7 @@ export default function Randoms() {
                     {randomData.map((item: RandomData) => (
                         <div className="flex flex-col ">
                             <Image
+                                key={item.id}
                                 src={item.image}
                                 alt={item.title}
                                 width={100}
