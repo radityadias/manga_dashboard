@@ -66,33 +66,23 @@ export  default  function NewRelease () {
 
     return (
         <>
-            <div className="mb-8 flex justify-between gap-5 ">
-                <div className="flex flex-1 flex-col gap-6">
-                    <div className="w-full">
-                        <div className="flex justify-between items-center mb-4">
-                            <h2 className="text-2xl font-semibold">New Release</h2>
-                            <Link href="#" className="text-md font-medium ">See more...</Link>
-                        </div>
-                        <div className="order-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-                            {newReleaseData.map((release : NewReleaseData) => (
-                                <Image
-                                    key={release.id}
-                                    src={release.image}
-                                    alt={release.image}
-                                    width={125}
-                                    height={150}
-                                    className="object-cover w-full h-52 rounded-md"
-                                />
-                            ))}
-                        </div>
-                    </div>
-
-                    <Genres />
-
+            <div className="w-full">
+                <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-2xl font-semibold">New Release</h2>
+                    <Link href="#" className="text-md font-medium ">See more...</Link>
                 </div>
-
-                <Populars />
-
+                <div className="order-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                    {newReleaseData.map((release: NewReleaseData) => (
+                        <Image
+                            key={release.id}
+                            src={release.image}
+                            alt={release.image}
+                            width={125}
+                            height={150}
+                            className="object-cover w-full h-52 rounded-md"
+                        />
+                    ))}
+                </div>
             </div>
         </>
     )
