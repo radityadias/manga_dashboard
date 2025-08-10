@@ -64,7 +64,8 @@ export default function Genres() {
                     {genresData.map((genre : string, index : number) => (
                       <Link
                         href="#"
-                        className="p-2 bg-gray-200 rounded-sm"
+                        className="p-1 sm:p-2 bg-gray-200 rounded-sm"
+                        key={index}
                       >
                           <span>
                               <p className="text-sm">{genre}</p>
