@@ -62,9 +62,14 @@ export default function Genres() {
                 <h2 className="text-2xl font-semibold mb-4">Genres</h2>
                 <div className="flex items-center gap-2 flex-wrap">
                     {genresData.map((genre : string, index : number) => (
-                        <span className="p-2 rounded-md bg-gray-200 text-sm" key={index} title={genre} aria-label={genre} role="button">
-                                    <Link href="#">{genre}</Link>
-                                </span>
+                      <Link
+                        href="#"
+                        className="p-2 bg-gray-200 rounded-sm"
+                      >
+                          <span>
+                              <p className="text-sm">{genre}</p>
+                          </span>
+                      </Link>
                     ))}
                 </div>
             </div>

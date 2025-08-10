@@ -39,7 +39,7 @@ export default function ByAlphabets() {
                 <h2 className="text-2xl font-semibold mb-4">By Alphabets</h2>
                 <div className="flex flex-wrap justify-baseline items-center gap-2">
                     {alphabetData.map((alphabet : string, index : number) => (
-                        <Link href="#" className="p-1 bg-gray-200 rounded-sm">
+                        <Link href="#" className="p-1 bg-gray-200 rounded-sm" key={index}>
                             <span className="p-2 text-sm" key={index} title={alphabet}
                                   aria-label={alphabet} role="button">
                                 {alphabet}
