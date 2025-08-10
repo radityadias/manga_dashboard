@@ -20,7 +20,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <AppSidebar />
                 <SidebarRail />
                 <SidebarInset>
-                    <header className="flex h-16 shrink-0 items-center gap-2 border-b ">
+                    <header className="sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2 border-b bg-white">
                         <div className="flex items-center gap-2 w-full max-w-[1280px] mx-auto px-4 sm:px-4 lg:px-0">
                             <SidebarTrigger />
                             <Separator orientation="vertical" className="mr-2 h-4" />
@@ -40,8 +40,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     <AppFooter />
                 </SidebarInset>
             </SidebarProvider>
-
         </>
-
     )
 }
