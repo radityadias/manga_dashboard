@@ -64,7 +64,7 @@ export default function AppSearch() {
     }
 
     return (
-        <div className="min-w-96 relative" ref={wrapperRef}>
+        <div className="min-w-fit sm:min-w-96 relative" ref={wrapperRef}>
             <div className="relative">
                 <input
                     type="text"

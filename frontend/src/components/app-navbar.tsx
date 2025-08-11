@@ -16,7 +16,7 @@ export default function AppNavbar() {
 
     const UserDropdown = () => (
         <>
-            <DropdownMenu >
+            <DropdownMenu>
                 <DropdownMenuTrigger className="rounded-full">
                     <UserIcon/>
                 </DropdownMenuTrigger>
