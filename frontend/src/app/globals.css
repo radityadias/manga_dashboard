@@ -121,3 +121,6 @@
   }
 }
 
+.container-wide {
+  @apply max-w-[1280px] mx-auto;
+}
