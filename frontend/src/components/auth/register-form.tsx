@@ -36,11 +36,7 @@ const formSchema = z
         path: ["confirmPassword"],
     })
 
-export function RegisterForm({
-                              className,
-                              ...props
-                          }: React.ComponentProps<"div">) {
-
+export function RegisterForm({className, ...props}: React.ComponentProps<"div">) {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {

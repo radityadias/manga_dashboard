@@ -9,40 +9,40 @@ interface RandomData {
     title: string;
 }
 
-export default function Randoms() {
-    const randomData = [
-        {
-            id: 1,
-            image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Evil+Baby",
-            title: "Evil Baby",
-        },
-        {
-            id: 2,
-            image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Doctor",
-            title: "THE ISEKAI DOCTOR",
-        },
-        {
-            id: 3,
-            image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Nukozuke",
-            title: "Nukozuke!",
-        },
-        {
-            id: 4,
-            image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Anata+Mitai",
-            title: "Anata Mitai ni",
-        },
-        {
-            id: 5,
-            image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Apologize",
-            title: "Is It Too Late to Apologize ",
-        },
-        {
-            id: 6,
-            image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Ojisan",
-            title: "Isekai Ojisan",
-        },
-    ]
+const randomData = [
+    {
+        id: 1,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Evil+Baby",
+        title: "Evil Baby",
+    },
+    {
+        id: 2,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Doctor",
+        title: "THE ISEKAI DOCTOR",
+    },
+    {
+        id: 3,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Nukozuke",
+        title: "Nukozuke!",
+    },
+    {
+        id: 4,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Anata+Mitai",
+        title: "Anata Mitai ni",
+    },
+    {
+        id: 5,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Apologize",
+        title: "Is It Too Late to Apologize ",
+    },
+    {
+        id: 6,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Ojisan",
+        title: "Isekai Ojisan",
+    },
+]
 
+export default function Randoms() {
     return (
         <>
             <div>
@@ -50,7 +50,6 @@ export default function Randoms() {
                     <h2 className="text-2xl font-semibold">Random Manga</h2>
                     <Link href="#" className="text-md font-medium">See more...</Link>
                 </div>
-
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                     {randomData.map((item: RandomData) => (

@@ -14,7 +14,6 @@ import {
     FormControl,
     FormField,
     FormItem,
-    FormLabel,
     FormMessage,
 } from "@/components/ui/form"
 import {
@@ -26,7 +25,6 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form";
 import { z } from "zod"
-import Link from "next/link"
 
 const formSchema = z.object({
     code: z.string().min(6, {

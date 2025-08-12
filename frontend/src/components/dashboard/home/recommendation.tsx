@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-// Mocked data as an array of objects
 const bannerData = [
     {
         image: "https://placehold.co/150x150/f0f4f8/94a3b8?text=Image+1",
@@ -77,33 +76,27 @@ export default function RecommendationsCarousel() {
         <div>
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Recommendations</h2>
 
-            {/* Carousel Container */}
             <div className="relative">
-                {/* The main grid container for the visible recommendation cards. */}
                 <div className={`grid gap-6 transition-all duration-500`}
                      style={{
                          gridTemplateColumns: `repeat(${cardsPerPage}, minmax(0, 1fr))`,
                      }}>
                     {currentItems.map((item, index) => (
-                        // Each item is a new card-like div.
                         <div
                             key={index}
-                            className="rounded-lg shadow-lg overflow-hidden bg-white p-4 transition-transform duration-300 hover:scale-[1.02] flex flex-col"
+                            className="rounded-lg shadow-lg overflow-hidden bg-white p-2 sm:p-4 transition-transform duration-300 hover:scale-[1.02] flex flex-col"
                         >
-                            {/* A nested grid to handle the top layout for each recommendation item. */}
                             <div className="grid grid-cols-6 gap-4">
-                                {/* Image container */}
-                                <div className="col-span-3 sm:col-span-2 md:col-span-2 lg:col-span-1 flex justify-center">
+                                <div className="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 flex justify-center">
                                     <Image
                                         src={item.image}
                                         alt={item.title}
                                         width={75}
                                         height={75}
-                                        className="rounded-md w-56 h-64 object-cover"
+                                        className="rounded-md w-full sm:h-64 object-cover"
                                     />
                                 </div>
 
-                                {/* Content container */}
                                 <div className="col-span-3 sm:col-span-4 flex flex-col justify-between">
                                     <div>
                                         {/* Title */}
