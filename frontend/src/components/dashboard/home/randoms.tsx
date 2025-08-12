@@ -54,7 +54,7 @@ export default function Randoms() {
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                     {randomData.map((item: RandomData) => (
-                        <div className="flex flex-col " key={item.id}>
+                        <div className="flex flex-col items-center" key={item.id}>
                             <Image
                                 src={item.image}
                                 alt={item.title}
@@ -62,9 +62,7 @@ export default function Randoms() {
                                 height={150}
                                 className="rounded-md h-48 w-full sm:h-64  object-cover"
                             />
-                            <div className="flex flex-col">
-                                <p>{item.title}</p>
-                            </div>
+                            <p className="text-center text-sm">{item.title}</p>
                         </div>
                     ))}
                 </div>

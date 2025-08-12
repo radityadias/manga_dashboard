@@ -1,6 +1,6 @@
 import * as React from "react"
-import { GalleryVerticalEnd } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import {
   HomeIcon,
   BookmarkIcon,
@@ -27,7 +27,7 @@ const data = {
     {
       title: "Home",
       icon: HomeIcon,
-      url: "#",
+      url: "/dashboard",
       isActive: true,
     },
     {
@@ -64,7 +64,7 @@ const data = {
         },
         {
           title: "Latest Updates",
-          url: "#",
+          url: "/dashboard/updates",
           isActive: false,
         },
       ],
@@ -101,10 +101,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             {data.navMain.map((item) => (
               <SidebarMenuItem key={item.title}>
                 <SidebarMenuButton asChild>
-                  <a href={item.url} className="font-medium text-lg">
+                  <Link href={item.url} className="font-medium text-lg">
                     {item.icon && <item.icon />}
                     {item.title}
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
                 {item.items?.length ? (
                   <SidebarMenuSub>

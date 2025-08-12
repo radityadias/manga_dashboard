@@ -1,16 +1,9 @@
 import { AppSidebar } from "@/components/app-sidebar"
 import AppFooter  from "@/components/app-footer"
-import { Separator } from "@/components/ui/separator"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
 import AppNavbar from "@/components/app-navbar";
-import {
-    UserIcon
-} from "lucide-react";
 import {
     SidebarInset,
     SidebarProvider,
-    SidebarTrigger,
     SidebarRail,
 } from "@/components/ui/sidebar"
 

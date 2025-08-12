@@ -203,7 +203,7 @@ export default function UpdatesPage() {
                                 className="rounded-md w-24 h-32 sm:w-40 sm:h-full object-cover"
                             />
                             <div className="flex flex-col w-full">
-                                <div className="flex justify-between relative items-start">
+                                <div className="flex justify-between relative items-center">
                                     <p className="text-lg font-semibold">{data.title}</p>
                                     <p className="text-sm font-medium">{data.author}</p>
                                 </div>

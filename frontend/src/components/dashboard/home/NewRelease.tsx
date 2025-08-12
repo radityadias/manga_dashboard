@@ -73,14 +73,16 @@ export  default  function NewRelease () {
                 </div>
                 <div className="order-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
                     {newReleaseData.map((release: NewReleaseData) => (
-                        <Image
-                            key={release.id}
-                            src={release.image}
-                            alt={release.image}
-                            width={125}
-                            height={150}
-                            className="object-cover w-full h-52 rounded-md"
-                        />
+                        <div className="flex flex-col items-center" key={release.id}>
+                            <Image
+                                src={release.image}
+                                alt={release.image}
+                                width={125}
+                                height={150}
+                                className="object-cover w-full h-52 rounded-md"
+                            />
+                            <p className="text-sm text-center">{release.title}</p>
+                        </div>
                     ))}
                 </div>
             </div>
