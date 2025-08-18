@@ -22,6 +22,7 @@ interface UpdatesData {
         releaseTime: string;
     }[];
     author: string;
+    scanlation: string;
 }
 
 const updatesData = [
