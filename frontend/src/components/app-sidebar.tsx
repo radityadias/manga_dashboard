@@ -18,10 +18,8 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-  SidebarRail,
 } from "@/components/ui/sidebar"
 
-// This is sample data.
 const data = {
   navMain: [
     {
@@ -35,6 +33,11 @@ const data = {
       icon: BookmarkIcon,
       url: "#",
       items: [
+        {
+          title: "Updates",
+          url: "/dashboard/updates",
+          isActive: false,
+        },
         {
           title: "Library",
           url: "#",

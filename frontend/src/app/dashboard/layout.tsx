@@ -7,7 +7,7 @@ import {
     SidebarRail,
 } from "@/components/ui/sidebar"
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
     return (
         <>
             <SidebarProvider>
@@ -15,9 +15,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <SidebarRail />
                 <SidebarInset>
                    <AppNavbar/>
-                    <div className="flex flex-1 flex-col gap-4 p-4">
-                        {children}
-                    </div>
+                        <div className="flex flex-1 flex-col gap-4 p-4">
+                            {children}
+                        </div>
                     <AppFooter />
                 </SidebarInset>
             </SidebarProvider>
