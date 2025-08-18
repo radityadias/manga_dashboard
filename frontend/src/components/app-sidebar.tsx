@@ -40,7 +40,7 @@ const data = {
         },
         {
           title: "Library",
-          url: "#",
+          url: "/dashboard/library",
           isActive: false,
         },
         {
