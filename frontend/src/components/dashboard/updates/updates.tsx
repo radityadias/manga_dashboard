@@ -1,6 +1,16 @@
 import {ChevronLeft} from "lucide-react";
+import {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+} from "@/components/ui/pagination";
 import Link from "next/link";
 import Image from "next/image";
+
 
 interface UpdatesData {
     id: number;
@@ -185,15 +195,15 @@ const updatesData = [
 export default function Updates() {
     return (
         <>
-            <div className="w-full container-wide">
+            <div className="w-full container-wide ">
                 <div className="flex gap-2 items-center mb-4 relative">
                     <Link href="/dashboard" className="rounded-full p-1 hover:bg-gray-300 ">
                         <ChevronLeft/>
                     </Link>
                     <h2 className="text-2xl font-semibold">Updates</h2>
                 </div>
-                <div className="grid grid-rows-10 gap-3">
-                    {updatesData.map(data => (
+                <div className="grid grid-rows-10 gap-3 mb-4">
+                    {updatesData.map((data : UpdatesData) => (
                         <div className="flex flex-row gap-2 bg-gray-200 p-2 rounded-md" key={data.id}>
                             <Image
                                 src={data.image}
@@ -228,6 +238,32 @@ export default function Updates() {
                             </div>
                         </div>
                     ))}
+                </div>
+                <div>
+                    <Pagination>
+                        <PaginationContent>
+                            <PaginationItem>
+                                <PaginationPrevious href="#" />
+                            </PaginationItem>
+                            <PaginationItem>
+                                <PaginationLink href="#" isActive>1</PaginationLink>
+                            </PaginationItem>
+                            <PaginationItem>
+                                <PaginationLink href="#">
+                                    2
+                                </PaginationLink>
+                            </PaginationItem>
+                            <PaginationItem>
+                                <PaginationLink href="#">3</PaginationLink>
+                            </PaginationItem>
+                            <PaginationItem>
+                                <PaginationEllipsis />
+                            </PaginationItem>
+                            <PaginationItem>
+                                <PaginationNext href="#" />
+                            </PaginationItem>
+                        </PaginationContent>
+                    </Pagination>
                 </div>
             </div>
         </>
