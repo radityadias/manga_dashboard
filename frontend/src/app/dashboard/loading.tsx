@@ -20,7 +20,7 @@ export default function DashboardLoading() {
                     <Skeleton className="w-full h-[705px]"/>
                 </div>
 
-                {/* Randoms */}
+                {/* Random */}
                 <div className="flex justify-between items-center w-full">
                     <Skeleton className="w-[166px] h-8"/>
                     <Skeleton className="w-[77px] h-6"/>

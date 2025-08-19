@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import RecommendationsCarousel from "@/components/dashboard/home/recommendations/recommendation";
 import LatestUpdate from "@/components/dashboard/home/latest-updates/latest-update";
 
-const Randoms = dynamic(() => import("@/components/dashboard/home/randoms"))
+const Randoms = dynamic(() => import("@/components/dashboard/home/randoms/random"))
 const NewRelease = dynamic(() => import("@/components/dashboard/home/new-release"))
 const Populars = dynamic(() => import("@/components/dashboard/home/populars"))
 const Genres = dynamic(() => import("@/components/dashboard/home/genres"))
@@ -255,13 +255,45 @@ const latestUpdatesData = [
     },
 ];
 
+const randomsData = [
+    {
+        id: 1,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Evil+Baby",
+        title: "Evil Baby",
+    },
+    {
+        id: 2,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Doctor",
+        title: "THE ISEKAI DOCTOR",
+    },
+    {
+        id: 3,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Nukozuke",
+        title: "Nukozuke!",
+    },
+    {
+        id: 4,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Anata+Mitai",
+        title: "Anata Mitai ni",
+    },
+    {
+        id: 5,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Apologize",
+        title: "Is It Too Late to Apologize ",
+    },
+    {
+        id: 6,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Ojisan",
+        title: "Isekai Ojisan",
+    },
+]
 
 export default function HomePage() {
     return (
         <div>
             <RecommendationsCarousel data={recommendationsData}/>
             <LatestUpdate data={latestUpdatesData}/>
-            <Randoms/>
+            <Randoms data={randomsData}/>
             <div className="flex justify-between gap-5 mb-8">
                 <div className="flex flex-1 flex-col gap-6">
                     <NewRelease/>
