@@ -1,38 +1,37 @@
-import {Button} from "@/components/ui/button";
 import Link from "next/link";
 
-export default function ByAlphabets() {
-    const alphabetData = [
-        "#",
-        "0-9",
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F",
-        "G",
-        "H",
-        "I",
-        "J",
-        "K",
-        "L",
-        "M",
-        "N",
-        "O",
-        "P",
-        "Q",
-        "R",
-        "S",
-        "T",
-        "U",
-        "V",
-        "W",
-        "X",
-        "Y",
-        "Z",
-    ];
+const alphabetData = [
+    "#",
+    "0-9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+];
 
+export default function ByAlphabets() {
     return (
         <>
             <div className="w-full mb-8">
