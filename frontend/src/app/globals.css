@@ -122,5 +122,5 @@
 }
 
 .container-wide {
-  @apply max-w-[1280px] mx-auto;
+  @apply max-w-[1280px]  mx-auto;
 }

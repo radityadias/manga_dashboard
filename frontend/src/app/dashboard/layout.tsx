@@ -15,7 +15,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
                 <SidebarRail />
                 <SidebarInset>
                    <AppNavbar/>
-                        <div className="flex flex-1 flex-col gap-4 p-4 container-wide">
+                        <div className="flex flex-1 flex-col gap-4 p-4 w-full container-wide">
                             {children}
                         </div>
                     <AppFooter />
