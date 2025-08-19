@@ -45,7 +45,7 @@ const data = {
         },
         {
           title: "History",
-          url: "#",
+          url: "/dashboard/history",
           isActive: false,
         }
       ],

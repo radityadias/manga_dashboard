@@ -169,7 +169,6 @@ const updatesData = [
     },
 ];
 
-
 export default function UpdatesPage() {
     return (
         <>
