@@ -60,6 +60,7 @@ export default function Randoms() {
                                 width={100}
                                 height={150}
                                 className="rounded-md h-48 w-full sm:h-64  object-cover"
+                                loading="lazy"
                             />
                             <p className="text-center text-sm">{item.title}</p>
                         </div>

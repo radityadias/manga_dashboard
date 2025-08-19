@@ -1,4 +1,4 @@
-import {UpdateData} from "@/types/dashboard/update-data";
+ import {UpdateData} from "@/types/dashboard/update-data";
 import UpdateCard from "@/components/dashboard/updates/update-card";
 
 interface UpdateGridProps {

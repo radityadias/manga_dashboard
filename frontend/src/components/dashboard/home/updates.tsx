@@ -208,6 +208,7 @@ export default function Updates() {
                             width={75}
                             height={100}
                             className="rounded-md w-24 h-32 object-cover"
+                            loading="lazy"
                         />
                     </div>
                     <div className="flex flex-col justify-start w-full">
