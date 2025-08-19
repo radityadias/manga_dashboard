@@ -34,7 +34,7 @@ const data = {
       url: "#",
       items: [
         {
-          title: "Updates",
+          title: "LatestUpdate",
           url: "/dashboard/updates",
           isActive: false,
         },
@@ -66,7 +66,7 @@ const data = {
           isActive: false,
         },
         {
-          title: "Latest Updates",
+          title: "Latest LatestUpdate",
           url: "/dashboard/updates",
           isActive: false,
         },

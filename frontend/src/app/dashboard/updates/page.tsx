@@ -172,7 +172,7 @@ const updatesData = [
 export default function UpdatesPage() {
     return (
         <>
-            <PageHeader children="Updates"/>
+            <PageHeader children="LatestUpdate"/>
             <UpdateGrid data={updatesData}/>
         </>
     )

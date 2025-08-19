@@ -8,7 +8,7 @@ export default function DashboardLoading() {
                 <Skeleton className="w-[200px] h-8"/>
                 <Skeleton className="w-full h-[288px] mb-16"/>
 
-                {/* Latest Updates */}
+                {/* Latest LatestUpdate */}
                 <div className="flex justify-between items-center w-full">
                     <Skeleton className="w-[166px] h-8"/>
                     <Skeleton className="w-[77px] h-6"/>
