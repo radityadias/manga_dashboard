@@ -17,7 +17,7 @@ export default function NotFound() {
                     We're sorry, but the page you requested could not be found
                 </p>
 
-                <Link href="/dashboard">
+                <Link href="/">
                     <Button variant="default">
                             Back to Dashboard
                     </Button>

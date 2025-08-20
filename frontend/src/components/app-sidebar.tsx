@@ -25,7 +25,7 @@ const data = {
     {
       title: "Home",
       icon: HomeIcon,
-      url: "/dashboard",
+      url: "/",
       isActive: true,
     },
     {
@@ -34,18 +34,18 @@ const data = {
       url: "#",
       items: [
         {
-          title: "LatestUpdate",
-          url: "/dashboard/updates",
+          title: "Update",
+          url: "/saved/updates",
           isActive: false,
         },
         {
           title: "Library",
-          url: "/dashboard/library",
+          url: "/saved/library",
           isActive: false,
         },
         {
           title: "History",
-          url: "/dashboard/history",
+          url: "/saved/history",
           isActive: false,
         }
       ],
@@ -66,7 +66,7 @@ const data = {
           isActive: false,
         },
         {
-          title: "Latest LatestUpdate",
+          title: "Latest Update",
           url: "/dashboard/updates",
           isActive: false,
         },
