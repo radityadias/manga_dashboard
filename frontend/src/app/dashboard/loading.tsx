@@ -27,7 +27,7 @@ export default function DashboardLoading() {
                 </div>
                 <Skeleton className="w-full h-[296px] mb-13"/>
 
-                {/* New Release | Genre | Populars Skeletons (with sidebar) */}
+                {/* New Release | Genre | Popular Skeletons (with sidebar) */}
                 <div className="flex flex-col md:flex-row justify-between gap-4 mb-8">
                     <div className="flex flex-1 flex-col gap-6">
                         <div className="flex flex-col gap-4">
@@ -42,7 +42,7 @@ export default function DashboardLoading() {
                             <Skeleton className="w-full h-[212px]" />
                         </div>
                     </div>
-                    {/* Sidebar column (Populars) */}
+                    {/* Sidebar column (Popular) */}
                     <Skeleton className="w-full md:w-[250px] h-[705px]" />
                 </div>
 

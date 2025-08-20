@@ -7,7 +7,7 @@ import LatestUpdate from "@/components/dashboard/home/latest-updates/latest-upda
 // Lazy Loading Components
 const Randoms = dynamic(() => import("@/components/dashboard/home/randoms/random"))
 const NewRelease = dynamic(() => import("@/components/dashboard/home/new-release/new-release"))
-const Populars = dynamic(() => import("@/components/dashboard/home/populars"))
+const Populars = dynamic(() => import("@/components/dashboard/home/populars/popular"))
 const Genres = dynamic(() => import("@/components/dashboard/home/genres/genre"))
 const ByAlphabets = dynamic(() => import("@/components/dashboard/home/by-alphabets"))
 
@@ -551,6 +551,39 @@ const genresData = [
     }
 ]
 
+const popularsData = [
+    {
+        id: 1,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Evil+Baby",
+        title: "Evil Baby",
+        genre: ["Action", "Adventures", "Slice of Life"]
+    },
+    {
+        id: 2,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Doctor",
+        title: "THE ISEKAI DOCTOR",
+        genre: ["Fantasy", "Isekai", "Medical"]
+    },
+    {
+        id: 3,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Nukozuke",
+        title: "Nukozuke!",
+        genre: ["Shojo", "Slice-of-Life", "Comedy"]
+    },
+    {
+        id: 4,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Anata+Mitai",
+        title: "Anata Mitai ni",
+        genre: ["Romance", "Yuri"]
+    },
+    {
+        id: 5,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Apologize",
+        title: "Is It Too Late to Apologize ",
+        genre: ["Pop Rock", "R&B"]
+    },
+]
+
 export default function HomePage() {
     return (
         <div>
@@ -562,7 +595,7 @@ export default function HomePage() {
                     <NewRelease data={newReleaseData}/>
                     <Genres data={genresData}/>
                 </div>
-                <Populars/>
+                <Populars data={popularsData}/>
             </div>
             <ByAlphabets/>
         </div>
