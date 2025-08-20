@@ -64,40 +64,40 @@ export default function AppSearch() {
     }
 
     return (
-        <div className="min-w-fit sm:min-w-96 relative" ref={wrapperRef}>
-            <div className="relative">
+        <div className="w-full max-w-lg relative" ref={wrapperRef}>
+            <div className="relative w-full">
                 <input
                     type="text"
                     placeholder="Search..."
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-w-96 transition-all duration-300 pr-10"
+                    className="flex h-10 text-white min-w-full rounded-md placeholder:text-white/60 bg-main-foreground px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 max-w-96 transition-all duration-300 pr-10"
                     value={query}
                     onChange={handleInputChange}
                 />
                 {query ? (
                     <X onClick={handleClear} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4 cursor-pointer"/>
                 ) : (
-                    <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4 pointer-events-none" />
+                    <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white h-4 w-4 pointer-events-none" />
                 )}
             </div>
             {results.length > 0 && (
-                <div className="absolute z-10 w-full bg-background border rounded-md shadow-lg mt-2">
+                <div className="absolute z-10 w-full bg-main-dark rounded-md shadow-lg mt-2 p-2 space-y-2 overflow-y-scroll max-h-96">
                     {results.map((result) => (
-                        <div key={result.id} className="flex gap-5 p-2 hover:bg-muted cursor-pointer">
+                        <div key={result.id} className="flex gap-5 p-1 hover:bg-main-accent cursor-pointer bg-main-foreground rounded-md">
                             <Image
                                 src={result.image}
                                 alt={result.title}
                                 width={80}
                                 height={96}
-                                className="rounded-sm w-20 h-24 object-cover"
+                                className="rounded-sm w-16 h-20 object-cover"
                             />
                             <div className="flex flex-col justify-between w-full py-1">
-                                <p>{result.title}</p>
+                                <p className="text-white">{result.title}</p>
                                 <div className="flex gap-2 items-center">
-                                    <div className="flex gap-1 items-center text-sm text-muted-foreground">
-                                        <StarIcon className="text-yellow-500 h-4 w-4" />
+                                    <div className="flex gap-1 items-center just text-yellow-500 text-sm">
+                                        <StarIcon className="h-4 w-4" />
                                         {result.rating}
                                     </div>
-                                    <div className="flex items-center gap-1 bg-gray-200 rounded-md px-2 text-xs text-foreground">
+                                    <div className="flex items-center gap-1 bg-main-foreground rounded-md px-2 text-xs text-white">
                                         {result.status}
                                     </div>
                                 </div>

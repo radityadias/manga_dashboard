@@ -78,11 +78,11 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
-      <SidebarHeader>
+      <SidebarHeader className="bg-main-foreground">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <a href="#">
+            <SidebarMenuButton size="lg" className="hover:bg-transparent hover:text-white active:bg-transparent " asChild>
+              <Link href="/">
                 <Image
                     src="/mangaku_logo.png"
                     alt="mangaku logo"
@@ -91,30 +91,30 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     className="w-12 h-auto"
                 />
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-medium text-2xl">MangaKu</span>
+                  <span className="font-medium text-2xl text-white">MangaKu</span>
                 </div>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="bg-main-foreground">
         <SidebarGroup>
           <SidebarMenu>
             {data.navMain.map((item) => (
               <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton asChild>
-                  <Link href={item.url} className="font-medium text-lg">
+                <SidebarMenuButton className="hover:bg-main-accent hover:text-white"  asChild>
+                  <Link href={item.url} className="font-medium text-lg text-white">
                     {item.icon && <item.icon />}
                     {item.title}
                   </Link>
                 </SidebarMenuButton>
                 {item.items?.length ? (
-                  <SidebarMenuSub>
+                  <SidebarMenuSub className="border-l-border-light ">
                     {item.items.map((item) => (
                       <SidebarMenuSubItem key={item.title}>
-                        <SidebarMenuSubButton asChild isActive={item.isActive}>
-                          <a href={item.url}>{item.title}</a>
+                        <SidebarMenuSubButton asChild isActive={item.isActive} className="hover:bg-main-accent text-white hover:text-white">
+                          <Link href={item.url}>{item.title}</Link>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                     ))}

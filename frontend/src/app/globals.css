@@ -3,6 +3,28 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-main-dark: #1E2025;
+
+  --color-main-foreground: #29343D;
+
+  /* Accent Color for Interactive Elements */
+  --color-main-accent: #3C5665;
+
+  /* Primary Text & Icons */
+  --color-text-dark: #495057;
+
+
+  /* Subtle Borders & Dividers */
+  --color-border-light: #92A4B1;
+
+  /* Secondary Background for Cards/Sections */
+  --color-background-card: #f5f5f5;
+
+  /* Hover state for active sidebar items */
+  --color-background-hover: #efefef;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -10,7 +10,7 @@ export default function RecommendationManga({item} : MangaCardProps) {
 
     return (
         <div
-            className="rounded-lg shadow-lg overflow-hidden bg-white p-2 sm:p-4 transition-transform duration-300 hover:scale-[1.02] flex flex-col"
+            className="rounded-lg shadow-lg overflow-hidden bg-[#F5F5F5] p-2 sm:p-4 transition-transform duration-300 hover:scale-[1.02] flex flex-col"
         >
             <div className="grid grid-cols-6 gap-4">
                 <div className="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 flex justify-center">
