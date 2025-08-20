@@ -1,12 +1,14 @@
 import dynamic from "next/dynamic";
 
+// Eager (default) Loading Components
 import RecommendationsCarousel from "@/components/dashboard/home/recommendations/recommendation";
 import LatestUpdate from "@/components/dashboard/home/latest-updates/latest-update";
 
+// Lazy Loading Components
 const Randoms = dynamic(() => import("@/components/dashboard/home/randoms/random"))
-const NewRelease = dynamic(() => import("@/components/dashboard/home/new-release"))
+const NewRelease = dynamic(() => import("@/components/dashboard/home/new-release/new-release"))
 const Populars = dynamic(() => import("@/components/dashboard/home/populars"))
-const Genres = dynamic(() => import("@/components/dashboard/home/genres"))
+const Genres = dynamic(() => import("@/components/dashboard/home/genres/genre"))
 const ByAlphabets = dynamic(() => import("@/components/dashboard/home/by-alphabets"))
 
 const recommendationsData = [
@@ -288,6 +290,267 @@ const randomsData = [
     },
 ]
 
+const newReleaseData = [
+    {
+        id: 1,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Evil+Baby",
+        title: "Evil Baby",
+    },
+    {
+        id: 2,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Doctor",
+        title: "THE ISEKAI DOCTOR",
+    },
+    {
+        id: 3,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Nukozuke",
+        title: "Nukozuke!",
+    },
+    {
+        id: 4,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Anata+Mitai",
+        title: "Anata Mitai ni",
+    },
+    {
+        id: 5,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Apologize",
+        title: "Is It Too Late to Apologize ",
+    },
+    {
+        id: 6,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Ojisan",
+        title: "Isekai Ojisan",
+    },
+    {
+        id: 7,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Nukozuke",
+        title: "Nukozuke!",
+    },
+    {
+        id: 8,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Anata+Mitai",
+        title: "Anata Mitai ni",
+    },
+    {
+        id: 9,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Apologize",
+        title: "Is It Too Late to Apologize ",
+    },
+    {
+        id: 10,
+        image: "https://placehold.co/150x150/2d3748/cbd5e0?text=Isekai+Ojisan",
+        title: "Isekai Ojisan",
+    },
+
+]
+
+const genresData = [
+    {
+        "id": 1,
+        "name": "Action"
+    },
+    {
+        "id": 2,
+        "name": "Adventure"
+    },
+    {
+        "id": 3,
+        "name": "Comedy"
+    },
+    {
+        "id": 4,
+        "name": "Drama"
+    },
+    {
+        "id": 5,
+        "name": "Fantasy"
+    },
+    {
+        "id": 6,
+        "name": "Horror"
+    },
+    {
+        "id": 7,
+        "name": "Mystery"
+    },
+    {
+        "id": 8,
+        "name": "Psychological"
+    },
+    {
+        "id": 9,
+        "name": "Romance"
+    },
+    {
+        "id": 10,
+        "name": "Sci-Fi"
+    },
+    {
+        "id": 11,
+        "name": "Slice of Life"
+    },
+    {
+        "id": 12,
+        "name": "Sports"
+    },
+    {
+        "id": 13,
+        "name": "Supernatural"
+    },
+    {
+        "id": 14,
+        "name": "Thriller"
+    },
+    {
+        "id": 15,
+        "name": "Mecha"
+    },
+    {
+        "id": 16,
+        "name": "Isekai"
+    },
+    {
+        "id": 17,
+        "name": "Harem"
+    },
+    {
+        "id": 18,
+        "name": "Reverse Harem"
+    },
+    {
+        "id": 19,
+        "name": "Shounen"
+    },
+    {
+        "id": 20,
+        "name": "Shoujo"
+    },
+    {
+        "id": 21,
+        "name": "Seinen"
+    },
+    {
+        "id": 22,
+        "name": "Josei"
+    },
+    {
+        "id": 23,
+        "name": "Ecchi"
+    },
+    {
+        "id": 24,
+        "name": "Smut"
+    },
+    {
+        "id": 25,
+        "name": "Gourmet"
+    },
+    {
+        "id": 26,
+        "name": "Historical"
+    },
+    {
+        "id": 27,
+        "name": "Martial Arts"
+    },
+    {
+        "id": 28,
+        "name": "Medical"
+    },
+    {
+        "id": 29,
+        "name": "Military"
+    },
+    {
+        "id": 30,
+        "name": "Music"
+    },
+    {
+        "id": 31,
+        "name": "Parody"
+    },
+    {
+        "id": 32,
+        "name": "Post-Apocalyptic"
+    },
+    {
+        "id": 33,
+        "name": "School Life"
+    },
+    {
+        "id": 34,
+        "name": "Space"
+    },
+    {
+        "id": 35,
+        "name": "Tragedy"
+    },
+    {
+        "id": 36,
+        "name": "Vampire"
+    },
+    {
+        "id": 37,
+        "name": "Super Power"
+    },
+    {
+        "id": 38,
+        "name": "Magic"
+    },
+    {
+        "id": 39,
+        "name": "Video Games"
+    },
+    {
+        "id": 40,
+        "name": "Demons"
+    },
+    {
+        "id": 41,
+        "name": "Dementia"
+    },
+    {
+        "id": 42,
+        "name": "Samurai"
+    },
+    {
+        "id": 43,
+        "name": "Gender Bender"
+    },
+    {
+        "id": 44,
+        "name": "Yaoi"
+    },
+    {
+        "id": 45,
+        "name": "Yuri"
+    },
+    {
+        "id": 46,
+        "name": "Webtoons"
+    },
+    {
+        "id": 47,
+        "name": "Award Winning"
+    },
+    {
+        "id": 48,
+        "name": "Wuxia"
+    },
+    {
+        "id": 49,
+        "name": "Xianxia"
+    },
+    {
+        "id": 50,
+        "name": "Manhua"
+    },
+    {
+        "id": 51,
+        "name": "Manhwa"
+    }
+]
+
 export default function HomePage() {
     return (
         <div>
@@ -296,8 +559,8 @@ export default function HomePage() {
             <Randoms data={randomsData}/>
             <div className="flex justify-between gap-5 mb-8">
                 <div className="flex flex-1 flex-col gap-6">
-                    <NewRelease/>
-                    <Genres/>
+                    <NewRelease data={newReleaseData}/>
+                    <Genres data={genresData}/>
                 </div>
                 <Populars/>
             </div>
