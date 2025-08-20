@@ -7,7 +7,7 @@ interface LatestUpdateGridProps {
 
 export default function LatestUpdateGrid({data} : LatestUpdateGridProps) {
     return (
-        <div className="grid grid-rows-5 gap-3 bg-gray-200 p-2 rounded-lg">
+        <div className="grid grid-rows-5 gap-3 bg-main-foreground p-2 rounded-lg">
             {data.map((item) => (
                 <LatestUpdateManga item={item} key={item.id} />
             ))}

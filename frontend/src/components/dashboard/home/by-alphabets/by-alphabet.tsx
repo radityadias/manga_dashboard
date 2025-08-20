@@ -38,8 +38,8 @@ const alphabetData = [
 
 const AlphabetItem = ({alphabet, index} : AlphabetItemProps ) => {
     return (
-        <Link href="#" className="p-1 sm:p-2 bg-gray-200 rounded-sm" key={index}>
-            <span className="p-2 text-sm" key={index} title={alphabet}
+        <Link href="#" className="p-1 sm:p-2 bg-main-foreground rounded-sm" key={index}>
+            <span className="p-2 text-sm text-white" key={index} title={alphabet}
                   aria-label={alphabet} role="button">
                 {alphabet}
             </span>
@@ -50,10 +50,10 @@ const AlphabetItem = ({alphabet, index} : AlphabetItemProps ) => {
 export default function ByAlphabet() {
     return (
         <>
-            <div className="w-full mb-8">
-                <h2 className="text-2xl font-semibold mb-4">By Alphabets</h2>
+            <div className="w-full mb-8 ">
+                <h2 className="text-2xl font-semibold mb-4 text-white">By Alphabets</h2>
 
-                <div className="flex flex-wrap justify-baseline items-center gap-2">
+                <div className="flex flex-wrap justify-baseline items-center gap-2 ">
                     {alphabetData.map((alphabet : string, index : number) => (
                         <AlphabetItem alphabet={alphabet} index={index} key={index}/>
                     ))}

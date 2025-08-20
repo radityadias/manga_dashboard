@@ -11,7 +11,7 @@ export  default  function NewRelease ({data} : NewReleaseProps) {
     return (
         <>
             <div className="w-full">
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex justify-between items-center mb-4 text-white">
                     <h2 className="text-2xl font-semibold">New Release</h2>
                     <Link href="#" className="text-md font-medium ">See more...</Link>
                 </div>

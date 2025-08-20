@@ -18,12 +18,12 @@ export default function LatestUpdateManga({item} : LatestUpdateMangaProps) {
                     loading="lazy"
                 />
             </div>
-            <div className="flex flex-col justify-start w-full">
-                <h3 className="text-lg font-medium text-gray-800 line-clamp-1">
+            <div className="flex flex-col justify-start w-full text-white">
+                <h3 className="text-lg font-medium line-clamp-1">
                     {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 line-clamp-1">{item.chapter}</p>
-                <div className="flex justify-between items-center text-gray-500 text-xs mt-auto">
+                <p className="text-sm  line-clamp-1">{item.chapter}</p>
+                <div className="flex justify-between items-center text-xs mt-auto">
                     <p className="line-clamp-1">{item.translator}</p>
                     <p className="whitespace-nowrap">{item.updated_at}</p>
                 </div>

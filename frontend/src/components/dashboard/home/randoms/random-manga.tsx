@@ -7,7 +7,7 @@ interface RandomMangaProps {
 
 export default function RandomManga({item} : RandomMangaProps) {
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center text-white">
             <Image
                 src={item.image}
                 alt={item.title}

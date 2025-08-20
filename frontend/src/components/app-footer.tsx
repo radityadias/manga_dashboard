@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function AppFooter() {
     return (
         <>
-            <div className="w-full bottom-0 p-4 bg-gray-800 text-white">
+            <div className="w-full bottom-0 p-4 bg-main-dark text-white border-t border-t-border-light">
                 <div className="flex flex-col gap-3">
                     <div className="flex items-center justify-center gap-5">
                         <Link href="https://discord.com">

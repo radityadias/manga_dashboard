@@ -12,15 +12,13 @@ export default function UpdatePagination() {
             <Pagination>
                 <PaginationContent>
                     <PaginationItem>
-                        <PaginationPrevious href="#" />
+                        <PaginationPrevious href="#" className="text-white" />
                     </PaginationItem>
                     <PaginationItem>
                         <PaginationLink href="#" isActive>1</PaginationLink>
                     </PaginationItem>
                     <PaginationItem>
-                        <PaginationLink href="#">
-                            2
-                        </PaginationLink>
+                        <PaginationLink href="#">2</PaginationLink>
                     </PaginationItem>
                     <PaginationItem>
                         <PaginationLink href="#">3</PaginationLink>
@@ -29,7 +27,7 @@ export default function UpdatePagination() {
                         <PaginationEllipsis />
                     </PaginationItem>
                     <PaginationItem>
-                        <PaginationNext href="#" />
+                        <PaginationNext href="#" className="text-white" />
                     </PaginationItem>
                 </PaginationContent>
             </Pagination>

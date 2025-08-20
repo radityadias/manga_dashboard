@@ -8,7 +8,7 @@ export default function DashboardLayout({children} : {children: React.ReactNode}
         <SidebarProvider>
             <AppSidebar />
             <SidebarRail />
-            <SidebarInset>
+            <SidebarInset className="bg-main-dark">
                 <AppNavbar/>
                     <div className="flex flex-1 flex-col gap-4 p-4 w-full container-wide">
                         {children}

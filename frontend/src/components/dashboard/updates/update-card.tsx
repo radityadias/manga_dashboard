@@ -9,7 +9,7 @@ interface UpdateCardProps {
 export default function UpdateCard({data} : UpdateCardProps) {
     return (
         <>
-            <div className="flex flex-row gap-2 bg-gray-200 p-2 rounded-md" key={data.id}>
+            <div className="flex flex-row gap-2 bg-main-foreground text-white p-2 rounded-md" key={data.id}>
                 <Image
                     src={data.image}
                     alt={data.title}

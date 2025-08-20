@@ -12,7 +12,7 @@ export default function GenreItem({item} : GenreItemProps ) {
     return (
         <Link
             href="#"
-            className="p-1 sm:p-2 bg-gray-200 rounded-sm"
+            className="p-1 sm:p-2 bg-main-foreground rounded-sm text-white"
         >
             <span>
                 <p className="text-sm">{item.name}</p>
