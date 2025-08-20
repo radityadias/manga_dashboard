@@ -9,7 +9,7 @@ const Randoms = dynamic(() => import("@/components/dashboard/home/randoms/random
 const NewRelease = dynamic(() => import("@/components/dashboard/home/new-release/new-release"))
 const Populars = dynamic(() => import("@/components/dashboard/home/populars/popular"))
 const Genres = dynamic(() => import("@/components/dashboard/home/genres/genre"))
-const ByAlphabets = dynamic(() => import("@/components/dashboard/home/by-alphabets"))
+const ByAlphabets = dynamic(() => import("@/components/dashboard/home/by-alphabets/by-alphabet"))
 
 const recommendationsData = [
     {

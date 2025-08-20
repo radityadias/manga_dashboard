@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+interface AlphabetItemProps {
+    alphabet: string;
+    index: number;
+}
+
 const alphabetData = [
     "#",
     "0-9",
@@ -31,19 +36,26 @@ const alphabetData = [
     "Z",
 ];
 
-export default function ByAlphabets() {
+const AlphabetItem = ({alphabet, index} : AlphabetItemProps ) => {
+    return (
+        <Link href="#" className="p-1 sm:p-2 bg-gray-200 rounded-sm" key={index}>
+            <span className="p-2 text-sm" key={index} title={alphabet}
+                  aria-label={alphabet} role="button">
+                {alphabet}
+            </span>
+        </Link>
+    )
+}
+
+export default function ByAlphabet() {
     return (
         <>
             <div className="w-full mb-8">
                 <h2 className="text-2xl font-semibold mb-4">By Alphabets</h2>
+
                 <div className="flex flex-wrap justify-baseline items-center gap-2">
                     {alphabetData.map((alphabet : string, index : number) => (
-                        <Link href="#" className="p-1 sm:p-2 bg-gray-200 rounded-sm" key={index}>
-                            <span className="p-2 text-sm" key={index} title={alphabet}
-                                  aria-label={alphabet} role="button">
-                                {alphabet}
-                            </span>
-                        </Link>
+                        <AlphabetItem alphabet={alphabet} index={index} key={index}/>
                     ))}
                 </div>
             </div>
