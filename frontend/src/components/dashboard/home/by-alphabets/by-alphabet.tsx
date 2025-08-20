@@ -1,0 +1,64 @@
+import Link from "next/link";
+
+interface AlphabetItemProps {
+    alphabet: string;
+    index: number;
+}
+
+const alphabetData = [
+    "#",
+    "0-9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+];
+
+const AlphabetItem = ({alphabet, index} : AlphabetItemProps ) => {
+    return (
+        <Link href="#" className="p-1 sm:p-2 bg-gray-200 rounded-sm" key={index}>
+            <span className="p-2 text-sm" key={index} title={alphabet}
+                  aria-label={alphabet} role="button">
+                {alphabet}
+            </span>
+        </Link>
+    )
+}
+
+export default function ByAlphabet() {
+    return (
+        <>
+            <div className="w-full mb-8">
+                <h2 className="text-2xl font-semibold mb-4">By Alphabets</h2>
+
+                <div className="flex flex-wrap justify-baseline items-center gap-2">
+                    {alphabetData.map((alphabet : string, index : number) => (
+                        <AlphabetItem alphabet={alphabet} index={index} key={index}/>
+                    ))}
+                </div>
+            </div>
+        </>
+    )
+}
