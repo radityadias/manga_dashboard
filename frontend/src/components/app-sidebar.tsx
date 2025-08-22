@@ -57,7 +57,7 @@ const data = {
       items: [
         {
           title: "Advance Search",
-          url: "#",
+          url: "/titles",
           isActive: false,
         },
         {
@@ -67,7 +67,7 @@ const data = {
         },
         {
           title: "Latest Update",
-          url: "/dashboard/updates",
+          url: "/titles/updates",
           isActive: false,
         },
       ],
@@ -91,7 +91,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     className="w-12 h-auto"
                 />
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-medium text-2xl text-white">MangaKu</span>
+                  <span className="font-medium text-2xl text-white">MangaGW</span>
                 </div>
               </Link>
             </SidebarMenuButton>
@@ -103,8 +103,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenu>
             {data.navMain.map((item) => (
               <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton className="hover:bg-main-accent hover:text-white"  asChild>
-                  <Link href={item.url} className="font-medium text-lg text-white">
+                <SidebarMenuButton className="hover:bg-main-accent hover:text-main-yellow"  asChild>
+                  <Link href={item.url} className="font-medium text-lg text-white ">
                     {item.icon && <item.icon />}
                     {item.title}
                   </Link>
@@ -113,7 +113,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <SidebarMenuSub className="border-l-border-light ">
                     {item.items.map((item) => (
                       <SidebarMenuSubItem key={item.title}>
-                        <SidebarMenuSubButton asChild isActive={item.isActive} className="hover:bg-main-accent text-white hover:text-white">
+                        <SidebarMenuSubButton asChild isActive={item.isActive} className="hover:bg-main-accent text-white hover:text-main-yellow">
                           <Link href={item.url}>{item.title}</Link>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>

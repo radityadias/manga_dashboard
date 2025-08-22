@@ -1,0 +1,61 @@
+"use client"
+
+import {useState} from "react";
+import {ChevronDownIcon, ChevronUpIcon} from "lucide-react";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+import {Button} from "@/components/ui/button";
+import SearchBar from "@/components/dashboard/advances-search/search-bar";
+import AdvanceFilters from "@/components/dashboard/advances-search/advance-filters";
+
+const formSchema = z.object({
+    query: z.string(),
+    sortBy: z.array(z.string()),
+    genre: z.array(z.string()),
+    status: z.array(z.string()),
+    language: z.array(z.string()),
+    rating: z.array(z.string()),
+})
+
+export default function SearchForm() {
+    const [dropdownOpen, setDropdownOpen] = useState(false)
+
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            query: "",
+            sortBy: [],
+            genre: [],
+            status: [],
+            language: [],
+            rating: [],
+        }
+    })
+
+    const onSubmit = (values: z.infer<typeof formSchema>) => {
+        console.log(values)
+    }
+
+    return (
+        <>
+            <div className="flex items-center gap-4">
+                <div className="w-40">
+                    <Button onClick={() => setDropdownOpen(!dropdownOpen)} className="flex justify-center w-full text-white border-none bg-main-accent hover:bg-main-foreground hover:text-main-yellow" variant="outline">
+                        {dropdownOpen ? (
+                            <ChevronUpIcon className="w-5 h-5" />
+                        ) : (
+                            <ChevronDownIcon className="w-5 h-5" />
+                        )}
+                        <p>Filters</p>
+                    </Button>
+                </div>
+
+                <SearchBar form={form} onSubmit={onSubmit} />
+            </div>
+
+            <AdvanceFilters form={form} dropdownOpen={dropdownOpen} onSubmit={onSubmit} />
+        </>
+
+    )
+}
