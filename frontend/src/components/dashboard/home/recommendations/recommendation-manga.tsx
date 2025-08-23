@@ -1,50 +1,46 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import {RecommendationData} from "@/types/dashboard/recommendation-data";
 
 interface MangaCardProps {
     item: RecommendationData;
+    index: number;
 }
 
-export default function RecommendationManga({item} : MangaCardProps) {
+export default function RecommendationManga({item, index} : MangaCardProps) {
     const eager_load_count = 2;
 
+    const loadingBehavior = index < eager_load_count ? "eager" : "lazy";
+
     return (
-        <div
-            className="rounded-lg overflow-hidden bg-main-foreground p-2 sm:p-4 transition-transform duration-300 hover:scale-[1.02] flex flex-col"
-        >
-            <div className="grid grid-cols-6 gap-4">
-                <div className="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 flex justify-center">
-                    <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={75}
-                        height={75}
-                        className="rounded-md w-full sm:h-64 object-cover"
-                        loading={item.id < eager_load_count ? "eager" : "lazy"}
-                    />
-                </div>
-
-                <div className="col-span-3 sm:col-span-4 flex flex-col justify-between text-white">
-                    <div>
-                        {/* Title */}
-                        <h3 className="text-lg font-medium mb-1 leading-tight">
-                            {item.title}
-                        </h3>
-                        {/* Genre */}
-                        <p className="text-sm mb-2">{item.genre}</p>
-                        {/* Description */}
-                        <p className="text-sm line-clamp-3">
-                            {item.description}
-                        </p>
+        <Link href="#" className="flex flex-row gap-2 w-full rounded-lg overflow-hidden bg-main-foreground p-2 sm:p-3 transition-transform duration-300 hover:scale-[1.02] ">
+            <Image
+                src={item.image}
+                alt={item.title}
+                width={150} height={200}
+                loading={loadingBehavior}
+                className="rounded-sm w-28 h-40 sm:w-52 sm:h-64 object-cover"/>
+            <div className="flex flex-col justify-between gap-2 w-full text-white">
+                <div className="space-y-2">
+                    <div className="overflow-y-hidden h-20 sm:h-auto">
+                        <p className="text-lg sm:text-xl text-main-yellow">{item.title}</p>
                     </div>
-
-                    <div className="mt-4 flex justify-between items-center">
-                        <p className="text-sm">
-                            by <span className="font-medium">{item.author}</span>
-                        </p>
+                    <div className="hidden sm:block">
+                        <div className="flex flex-row flex-wrap gap-1">
+                            {item.genre.map((genre, index) => (
+                                <span key={index} className="py-0.5 px-2 text-[10px] bg-main-accent rounded-full uppercase font-semibold">
+                                    {genre}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="overflow-y-auto h-full hidden sm:block">
+                        <p className="text-sm">{item.description}</p>
                     </div>
                 </div>
+                <p className="italic text-sm">{item.author}</p>
             </div>
-        </div>
+        </Link>
     )
 }

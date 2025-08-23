@@ -42,8 +42,8 @@ export default function RecommendationsCarousel({data} : RecommendationProps) {
                      style={{
                          gridTemplateColumns: `repeat(${cardsPerPage}, minmax(0, 1fr))`,
                      }}>
-                    {currentItems.map((item) => (
-                        <RecommendationManga item={item} key={item.id}/>
+                    {currentItems.map((item, index) => (
+                        <RecommendationManga item={item} key={item.id} index={index}/>
                     ))}
                 </div>
             </div>
@@ -52,7 +52,7 @@ export default function RecommendationsCarousel({data} : RecommendationProps) {
             <div className="mt-6 flex justify-center items-center gap-4 mb-8">
                 <button
                     onClick={handlePrev}
-                    className="p-1 bg-main-accent text-white rounded-full shadow-lg opacity-75 hover:opacity-100 transition-opacity duration-200"
+                    className="p-1 bg-main-accent/50 hover:bg-main-accent/70 active:bg-main-accent text-white rounded-full shadow-lg transition-opacity duration-200"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -61,7 +61,7 @@ export default function RecommendationsCarousel({data} : RecommendationProps) {
                 <p className="text-sm text-white">{`No. ${currentPage + 1}`}</p>
                 <button
                     onClick={handleNext}
-                    className="p-1 bg-main-accent text-white rounded-full shadow-lg opacity-75 hover:opacity-100 transition-opacity duration-200"
+                    className="p-1 bg-main-accent/50 hover:bg-main-accent/70 active:bg-main-accent  text-white rounded-full shadow-lg transition-opacity duration-200"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
