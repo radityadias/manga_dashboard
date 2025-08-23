@@ -24,7 +24,9 @@ export default function RecommendationManga({item, index} : MangaCardProps) {
             <div className="flex flex-col justify-between gap-2 w-full text-white">
                 <div className="space-y-2">
                     <div className="overflow-y-hidden h-20 sm:h-auto">
-                        <p className="text-lg sm:text-xl text-main-yellow">{item.title}</p>
+                        <span>
+                            <p className="text-lg sm:text-xl">{item.title}</p>
+                        </span>
                     </div>
                     <div className="hidden sm:block">
                         <div className="flex flex-row flex-wrap gap-1">

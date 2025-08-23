@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {LatestUpdateData} from "@/types/dashboard/latest-update-data";
 
 interface LatestUpdateMangaProps {
@@ -7,7 +8,7 @@ interface LatestUpdateMangaProps {
 
 export default function LatestUpdateManga({item} : LatestUpdateMangaProps) {
     return (
-        <div className="flex gap-3">
+        <Link href="#" className="flex gap-3">
             <div className="flex-shrink-0">
                 <Image
                     src={item.image}
@@ -19,15 +20,14 @@ export default function LatestUpdateManga({item} : LatestUpdateMangaProps) {
                 />
             </div>
             <div className="flex flex-col justify-start w-full text-white">
-                <h3 className="text-lg font-medium line-clamp-1">
+                <h3 className="text-lg font-medium line-clamp-1 hover:text-main-yellow active:text-main-yellow/70">
                     {item.title}
                 </h3>
-                <p className="text-sm  line-clamp-1">{item.chapter}</p>
+                <p className="text-xs line-clamp-1 text-white/80">{item.chapter}</p>
                 <div className="flex justify-between items-center text-xs mt-auto">
-                    <p className="line-clamp-1">{item.translator}</p>
                     <p className="whitespace-nowrap">{item.updated_at}</p>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }

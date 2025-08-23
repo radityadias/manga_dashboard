@@ -23,7 +23,7 @@ export default function LatestUpdate({data} : LatestUpdateProps) {
         <div className="bg-transparent text-white rounded-lg mb-8">
             <div className="flex justify-between items-center mb-4 text-white">
                 <h2 className="text-2xl font-semibold">Latest Updates</h2>
-                <Link href="#" className="text-md font-medium ">See more...</Link>
+                <Link href="#" className="text-md font-medium hover:text-main-yellow active:text-main-yellow/50">See more...</Link>
             </div>
 
             {isMobile ? (
