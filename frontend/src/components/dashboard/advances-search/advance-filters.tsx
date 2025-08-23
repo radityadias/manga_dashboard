@@ -36,7 +36,7 @@ export default function AdvanceFilters ({form, dropdownOpen, onSubmit}: { form: 
                 <div className="w-full">
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)}>
-                            <div className="grid grid-cols-5 gap-4">
+                            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4">
                                 {filterDropdownData.map((data) => (
                                     <FilterDropdown label={data.label} options={data.value} name={data.name} form={form} key={data.name} />
                                 ))}

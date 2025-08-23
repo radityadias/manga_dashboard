@@ -30,8 +30,8 @@ export default function FilterDropdown({label, options, name, form}: FilterDropd
                                     <MultiSelectValue placeholder="All" className="placeholder:text-white"/>
                                 </MultiSelectTrigger>
                             </FormControl>
-                            <MultiSelectContent >
-                                <MultiSelectGroup>
+                            <MultiSelectContent className="bg-main-foreground text-white" >
+                                <MultiSelectGroup className="text-white">
                                     {options.map((item) => (
                                         <MultiSelectItem key={item} value={item.toLowerCase()}>{item}</MultiSelectItem>
                                     ))}

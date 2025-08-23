@@ -260,7 +260,7 @@ export function MultiSelectContent({
           <CommandList>{children}</CommandList>
         </Command>
       </div>
-      <PopoverContent className="min-w-[var(--radix-popover-trigger-width)] p-0">
+      <PopoverContent className="min-w-[var(--radix-popover-trigger-width)] p-0 " align="start">
         <Command {...props}>
           {canSearch ? (
             <CommandInput
@@ -305,6 +305,7 @@ export function MultiSelectItem({
   return (
     <CommandItem
       {...props}
+      className="data-[selected=true]:bg-main-accent data-[selected=true]:text-main-yellow"
       value={value}
       onSelect={v => {
         toggleValue(v)
