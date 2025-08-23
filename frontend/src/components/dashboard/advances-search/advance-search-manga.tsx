@@ -8,14 +8,14 @@ interface ItemCardProps {
     data: AdvanceSearchData;
 }
 
-export default function ItemCard({data} : ItemCardProps) {
+export default function AdvanceSearchManga({data} : ItemCardProps) {
     return(
         <>
-            <Link href="#" className="flex flex-row gap-2 bg-main-foreground text-white p-2 rounded-md">
-                <Image src={data.image} alt={data.title} width={150} height={200} className="rounded-md w-36 h-48 object-cover" />
+            <Link href="#" className="flex flex-row overflow-hidden gap-2 bg-main-foreground text-white p-2 rounded-md h-72 sm:h-full">
+                <Image src={data.image} alt={data.title} width={150} height={200} className="rounded-md w-20 h-28 sm:w-36 sm:h-48 object-cover" />
                 <div className="flex flex-col gap-1 w-full">
                     <div className="text-lg">{data.title}</div>
-                    <div className="flex flex-row gap-1">
+                    <div className="flex flex-row flex-wrap gap-1">
                         {data.genre.map((item, index) => (
                             <span key={item} className="p-1 font uppercase ">
                                 <p className="text-[10px]">{item}</p>
@@ -33,7 +33,7 @@ export default function ItemCard({data} : ItemCardProps) {
                         </div>
                         <p className="text-sm">{data.status}</p>
                     </div>
-                    <div className="overflow-y-hidden">
+                    <div>
                         <p className="text-sm">
                             {data.description}
                         </p>

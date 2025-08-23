@@ -1,6 +1,9 @@
-import SearchForm from "@/components/dashboard/advances-search/search-form";
-import ItemGrid from "@/components/dashboard/advances-search/item-grid";
-import AdvanceSearchPagination from "@/components/dashboard/advances-search/advance-search-pagination";
+import dynamic from "next/dynamic";
+
+const SearchForm = dynamic(() => import("@/components/dashboard/advances-search/search-form"))
+const AdvanceSearchPagination = dynamic(() => import("@/components/dashboard/advances-search/advance-search-pagination"))
+
+import AdvanceSearchMangaGrid from "@/components/dashboard/advances-search/advance-search-manga-grid";
 
 const searchData = [
     {
@@ -46,7 +49,7 @@ const searchData = [
         "genre": ["Slice of Life", "School", "Comedy", "Sci-Fi", "Romance"],
         "rating": 8.9,
         "status": "Completed",
-        "description": "Follow the daily lives of students training to become interstellar explorers."
+        "description": "Follow the daily lives of students training to become interstellar explorers"
     },
     {
         "id": 6,
@@ -99,7 +102,7 @@ export default function AdvanceSearch() {
     return (
         <>
             <SearchForm />
-            <ItemGrid data={searchData} />
+            <AdvanceSearchMangaGrid data={searchData} />
             <AdvanceSearchPagination />
         </>
     )
