@@ -5,6 +5,7 @@ import { useIsTablet } from "@/hooks/use-Tablet";
 import {LatestUpdateData} from "@/types/dashboard/latest-update-data";
 import LatestUpdateGrid from "@/components/dashboard/home/latest-updates/latest-update-grid";
 import Link from "next/link";
+import {SectionHeader} from "@/components/dashboard/home/section-header";
 
 interface LatestUpdateProps {
     data: LatestUpdateData[];
@@ -21,10 +22,7 @@ export default function LatestUpdate({data} : LatestUpdateProps) {
 
     return (
         <div className="bg-transparent text-white rounded-lg mb-8">
-            <div className="flex justify-between items-center mb-4 text-white">
-                <h2 className="text-2xl font-semibold">Latest Updates</h2>
-                <Link href="#" className="text-md font-medium hover:text-main-yellow active:text-main-yellow/50">See more...</Link>
-            </div>
+            <SectionHeader children="Latest Updates" />
 
             {isMobile ? (
                 <div className="grid grid-cols-1 gap-6">
