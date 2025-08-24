@@ -6,7 +6,7 @@ export interface UpdateData {
         language: string;
         chapter: string;
         releaseTime: string;
+        scanlation: string;
     }[];
-    author: string;
-    scanlation: string;
+    author?: string;
 }
