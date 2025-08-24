@@ -8,7 +8,7 @@ interface LatestUpdateMangaProps {
 
 export default function LatestUpdateManga({item} : LatestUpdateMangaProps) {
     return (
-        <Link href="#" className="flex gap-3">
+        <Link href="#" className="flex gap-3 group">
             <div className="flex-shrink-0">
                 <Image
                     src={item.image}
@@ -20,7 +20,7 @@ export default function LatestUpdateManga({item} : LatestUpdateMangaProps) {
                 />
             </div>
             <div className="flex flex-col justify-start w-full text-white">
-                <h3 className="text-lg font-medium line-clamp-1 hover:text-main-yellow active:text-main-yellow/70">
+                <h3 className="text-lg font-medium line-clamp-1 hover:text-main-yellow active:text-main-yellow/70 group-hover:text-yellow-primary">
                     {item.title}
                 </h3>
                 <p className="text-xs line-clamp-1 text-white/80">{item.chapter}</p>

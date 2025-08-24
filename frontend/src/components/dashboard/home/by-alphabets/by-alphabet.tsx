@@ -38,8 +38,8 @@ const alphabetData = [
 
 const AlphabetItem = ({alphabet, index} : AlphabetItemProps ) => {
     return (
-        <Link href="#" className="p-1 sm:p-2 bg-main-foreground rounded-sm" key={index}>
-            <span className="p-2 text-sm text-white" key={index} title={alphabet}
+        <Link href="#" className="p-1 sm:p-2 bg-main-foreground rounded-sm text-white hover:text-yellow-primary active:text-yellow-primary/70" key={index}>
+            <span className="p-2 text-sm" key={index} title={alphabet}
                   aria-label={alphabet} role="button">
                 {alphabet}
             </span>

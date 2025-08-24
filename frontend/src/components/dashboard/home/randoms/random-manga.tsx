@@ -8,7 +8,7 @@ interface RandomMangaProps {
 
 export default function RandomManga({item} : RandomMangaProps) {
     return (
-        <Link href="#" className="flex flex-col items-center text-white hover:scale-105 transition-all duration-300">
+        <Link href="#" className="flex flex-col items-center hover:scale-105 transition-all duration-300 group">
             <Image
                 src={item.image}
                 alt={item.title}
@@ -17,7 +17,7 @@ export default function RandomManga({item} : RandomMangaProps) {
                 className="rounded-md h-48 w-full sm:h-64  object-cover"
                 loading="lazy"
             />
-            <p className="text-center text-sm">{item.title}</p>
+            <p className="text-center text-sm text-white group-hover:text-yellow-primary">{item.title}</p>
         </Link>
     )
 }

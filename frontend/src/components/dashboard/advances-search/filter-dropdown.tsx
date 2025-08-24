@@ -26,7 +26,7 @@ export default function FilterDropdown({label, options, name, form}: FilterDropd
                         <FormLabel className="text-white">{label}</FormLabel>
                         <MultiSelect onValuesChange={field.onChange} values={field.value}>
                             <FormControl>
-                                <MultiSelectTrigger className="w-full bg-main-foreground border border-main-yellow/50 text-white">
+                                <MultiSelectTrigger className="w-full bg-main-foreground border border-yellow-primary/70 text-white">
                                     <MultiSelectValue placeholder="All" className="placeholder:text-white"/>
                                 </MultiSelectTrigger>
                             </FormControl>

@@ -17,7 +17,9 @@
   /* Subtle Borders & Dividers */
   --color-border-light: #92A4B1;
 
-  --color-main-yellow: #FFCD00;
+  --color-yellow-primary: #FFCD00;
+  --color-yellow-foreground: #FFE166;
+  --color-yellow-accent: #FFF5CC
 }
 
 @theme inline {
@@ -140,4 +142,24 @@
 
 .container-wide {
   @apply max-w-[1280px]  mx-auto;
+}
+
+.yellow-primary {
+  @apply bg-yellow-primary hover:bg-yellow-foreground active:bg-yellow-accent text-black;
+}
+
+.yellow-darken {
+  @apply bg-yellow-primary hover:bg-yellow-primary/70 active:bg-yellow-primary/50 text-black;
+}
+
+.yellow-primary-reverse {
+  @apply bg-yellow-accent hover:bg-yellow-foreground active:bg-yellow-primary text-black;
+}
+
+.dark-primary {
+  @apply bg-main-dark hover:bg-main-foreground active:bg-main-accent text-white;
+}
+
+.dark-primary-reverse {
+  @apply bg-main-accent hover:bg-main-foreground active:bg-main-dark text-white;
 }

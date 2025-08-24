@@ -14,7 +14,7 @@ export default function RecommendationManga({item, index} : MangaCardProps) {
     const loadingBehavior = index < eager_load_count ? "eager" : "lazy";
 
     return (
-        <Link href="#" className="flex flex-row gap-2 w-full rounded-lg overflow-hidden bg-main-foreground p-2 sm:p-3 transition-transform duration-300 hover:scale-[1.02] ">
+        <Link href="#" className="flex flex-row gap-2 w-full rounded-lg overflow-hidden bg-main-foreground p-2 sm:p-3 transition-transform duration-300 hover:scale-[1.02] group">
             <Image
                 src={item.image}
                 alt={item.title}
@@ -23,7 +23,7 @@ export default function RecommendationManga({item, index} : MangaCardProps) {
                 className="rounded-sm w-28 h-40 sm:w-52 sm:h-64 object-cover"/>
             <div className="flex flex-col justify-between gap-2 w-full text-white">
                 <div className="space-y-2">
-                    <div className="overflow-y-hidden h-20 sm:h-auto group">
+                    <div className="overflow-y-hidden h-20 sm:h-auto group-hover:text-yellow-primary">
                         <span>
                             <p className="text-lg sm:text-xl">{item.title}</p>
                         </span>

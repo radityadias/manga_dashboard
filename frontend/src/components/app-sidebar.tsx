@@ -103,7 +103,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenu>
             {data.navMain.map((item) => (
               <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton className="hover:bg-main-accent hover:text-main-yellow"  asChild>
+                <SidebarMenuButton className="hover:bg-main-accent active:bg-main-accent/50 active:text-yellow-primary/70 hover:text-yellow-primary" asChild>
                   <Link href={item.url} className="font-medium text-lg text-white ">
                     {item.icon && <item.icon />}
                     {item.title}
@@ -113,7 +113,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <SidebarMenuSub className="border-l-border-light ">
                     {item.items.map((item) => (
                       <SidebarMenuSubItem key={item.title}>
-                        <SidebarMenuSubButton asChild isActive={item.isActive} className="hover:bg-main-accent text-white hover:text-main-yellow">
+                        <SidebarMenuSubButton asChild isActive={item.isActive} className="hover:bg-main-accent active:bg-main-accent/50 active:text-yellow-primary/70 text-white hover:text-yellow-primary">
                           <Link href={item.url}>{item.title}</Link>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>

@@ -41,7 +41,9 @@ export default function SearchForm() {
         <>
             <div className="flex items-center gap-4">
                 <div className="w-40">
-                    <Button onClick={() => setDropdownOpen(!dropdownOpen)} className="flex justify-center w-full text-white border-none bg-main-accent hover:bg-main-foreground hover:text-main-yellow" variant="outline">
+                    <Button
+                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                        className={`flex justify-center w-full border-none ${dropdownOpen ? ('yellow-darken') : ('dark-primary-reverse')}`} variant="outline">
                         {dropdownOpen ? (
                             <ChevronUpIcon className="w-5 h-5" />
                         ) : (
@@ -56,6 +58,5 @@ export default function SearchForm() {
 
             <AdvanceFilters form={form} dropdownOpen={dropdownOpen} onSubmit={onSubmit} />
         </>
-
     )
 }

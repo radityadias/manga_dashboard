@@ -18,7 +18,7 @@ export default function SearchBar({form, onSubmit}: { form: any, onSubmit: any})
                                         <div className="relative">
                                             <Input
                                                 placeholder="Search anything..."
-                                                className="pl-10 bg-main-foreground text-white border-none focus-visible:ring-[1px] focus:border-1 focus:border-border-light"
+                                                className="pl-10 bg-main-foreground text-white border-none focus-visible:ring-[1px] focus-visible:ring-yellow-primary/50"
                                                 {...field}
                                             />
                                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-white w-4 h-4"/>

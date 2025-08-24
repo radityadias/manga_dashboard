@@ -8,7 +8,7 @@ export const SectionHeader = ({className, children,...props} : React.ComponentPr
           {...props}
       >
           <h2 className="text-2xl font-semibold">{children}</h2>
-          <Link href="#" className="text-md font-medium text-main-yellow hover:text-main-yellow/70 active:text-main-yellow/50">See more...</Link>
+          <Link href="#" className="text-md font-medium text-yellow-primary hover:text-yellow-primary/80 active:text-yellow-primary/60 ">See more...</Link>
       </div>
   );
 };
