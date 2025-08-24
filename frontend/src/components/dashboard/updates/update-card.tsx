@@ -26,7 +26,7 @@ export default function UpdateCard({data} : UpdateCardProps) {
                 </div>
                 <div className="grid grid-rows-3 gap-1 h-full">
                     {data.newChapter.map((item, index) => (
-                        <Link href="#" className="flex flex-col justify-evenly bg-transparent rounded-sm px-1.5 py-0.5 hover:bg-main-accent/50 hover:scale-101 transform duration-300">
+                        <Link key={index} href="#" className="flex flex-col justify-evenly bg-transparent rounded-sm px-1.5 py-0.5 hover:bg-main-accent/50 hover:scale-101 transform duration-300">
                             <div className="flex justify-between">
                                 <p className="text-sm text-white">{item.chapter}</p>
                                 <p className="text-sm text-white w-40 text-start">{item.releaseTime}</p>

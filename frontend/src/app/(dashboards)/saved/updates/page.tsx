@@ -174,6 +174,7 @@ const updatesData = [
         "author": "Orion"
     }
 ]
+
 export default function UpdatesPage() {
     return (
         <>
