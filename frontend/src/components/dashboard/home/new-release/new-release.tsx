@@ -12,7 +12,7 @@ export  default  function NewRelease ({data} : NewReleaseProps) {
     return (
         <>
             <div className="w-full">
-                <SectionHeader children="New Release" />
+                <SectionHeader title="New Release" path="/new-release"/>
 
                 <NewReleaseGrid data={data}/>
             </div>

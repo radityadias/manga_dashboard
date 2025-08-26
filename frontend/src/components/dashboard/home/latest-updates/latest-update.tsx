@@ -22,7 +22,7 @@ export default function LatestUpdate({data} : LatestUpdateProps) {
 
     return (
         <div className="bg-transparent text-white rounded-lg mb-8">
-            <SectionHeader children="Latest Updates" />
+            <SectionHeader title="Latest Updates" path="/updates" />
 
             {isMobile ? (
                 <div className="grid grid-cols-1 gap-6">

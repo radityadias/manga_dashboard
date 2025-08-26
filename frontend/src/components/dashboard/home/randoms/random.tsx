@@ -12,7 +12,7 @@ export default function Random({data} : RandomProps) {
     return (
         <>
             <div>
-                <SectionHeader children="Random Manga"/>
+                <SectionHeader title="Random Manga" path="/randoms"/>
 
                 <RandomGrid data={data}/>
 
