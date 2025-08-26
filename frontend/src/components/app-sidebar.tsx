@@ -61,8 +61,8 @@ const data = {
           isActive: false,
         },
         {
-          title: "Recommendations",
-          url: "#",
+          title: "New Releases",
+          url: "/titles/new-releases",
           isActive: false,
         },
         {
