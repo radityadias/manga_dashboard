@@ -1,6 +1,5 @@
 import {PageHeader} from "@/components/page-header";
-import UpdateGrid from "@/components/dashboard/updates/update-grid";
-import UpdatePagination from "@/components/dashboard/updates/update-pagination";
+import PageGrid from "@/components/page-grid";
 
 const updatesData = [
     {
@@ -179,8 +178,7 @@ export default function UpdatesPage() {
     return (
         <>
             <PageHeader children="Followed Update"/>
-            <UpdateGrid data={updatesData}/>
-            <UpdatePagination/>
+            <PageGrid className="grid-rows-10" card="full" data={updatesData} />
         </>
     )
 }

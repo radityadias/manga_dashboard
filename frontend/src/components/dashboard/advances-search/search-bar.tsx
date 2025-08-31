@@ -1,7 +1,10 @@
+// Components
 import {Form, FormControl, FormField, FormItem} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
-import {Search} from "lucide-react";
 import {Button} from "@/components/ui/button";
+
+// Icons
+import {Search} from "lucide-react";
 
 export default function SearchBar({form, onSubmit}: { form: any, onSubmit: any}) {
     return (

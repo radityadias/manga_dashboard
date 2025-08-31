@@ -31,7 +31,7 @@ const data = {
     {
       title: "Saved",
       icon: BookmarkIcon,
-      url: "#",
+      url: "/saved/library",
       items: [
         {
           title: "Update",
@@ -53,7 +53,7 @@ const data = {
     {
       title: "Titles",
       icon: BookIcon,
-      url: "#",
+      url: "/titles",
       items: [
         {
           title: "Advance Search",

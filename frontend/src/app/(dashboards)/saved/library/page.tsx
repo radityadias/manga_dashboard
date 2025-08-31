@@ -1,8 +1,5 @@
 import {PageHeader} from "@/components/page-header";
-
-import LibraryHeader from "@/components/dashboard/library/library-header";
-import LibraryGrid from "@/components/dashboard/library/library-grid";
-import LibraryPagination from "@/components/dashboard/library/library-pagination";
+import PageGrid from "@/components/page-grid";
 
 const libraryData = [
     {
@@ -155,10 +152,7 @@ export default function LibraryPage () {
     return (
         <>
             <PageHeader children="Library"/>
-
-            <LibraryHeader/>
-            <LibraryGrid data={libraryData}/>
-            <LibraryPagination/>
+            <PageGrid className="grid-rows-0 grid-cols-2 sm:grid-cols-4 lg:grid-cols-6" card="simple" data={libraryData}/>
         </>
     )
 }

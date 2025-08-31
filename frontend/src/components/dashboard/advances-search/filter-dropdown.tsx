@@ -1,4 +1,6 @@
 import {FormControl, FormField, FormItem, FormLabel} from "@/components/ui/form";
+
+// Components
 import {
     MultiSelect,
     MultiSelectContent,
@@ -7,6 +9,7 @@ import {
     MultiSelectValue
 } from "@/components/ui/multi-select";
 
+//
 interface FilterDropdownItemProps {
     label: string;
     options: string[];

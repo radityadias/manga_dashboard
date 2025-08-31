@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { UpdateData } from "@/types/dashboard/update-data";
 
+// Types
+import {MangaCardData} from "@/types/dashboard/manga-card-data";
+
+// Interfaces
 interface UpdateCardProps {
-    data: UpdateData;
+    data: MangaCardData;
 }
 
-export default function UpdateCard({data} : UpdateCardProps) {
+export default function CardFull({data} : UpdateCardProps) {
     return (
         <div className="flex flex-row gap-2 bg-main-foreground p-2 rounded-sm">
             <Image
@@ -15,6 +18,7 @@ export default function UpdateCard({data} : UpdateCardProps) {
                 width={150}
                 height={200}
                 className="rounded-md w-20 h-28 sm:w-40 sm:h-48 object-cover"
+                loading="lazy"
             />
 
             <div className="flex flex-col gap-2 w-full">
@@ -25,7 +29,7 @@ export default function UpdateCard({data} : UpdateCardProps) {
                     <hr className="border-yellow-primary/50"/>
                 </div>
                 <div className="grid grid-rows-3 gap-1 h-full">
-                    {data.newChapter.map((item, index) => (
+                    {data.newChapter?.map((item, index) => (
                         <Link key={index} href="#" className="flex flex-col justify-evenly bg-transparent rounded-sm px-1.5 py-0.5 hover:bg-main-accent/50 hover:scale-101 transform duration-300">
                             <div className="flex justify-between">
                                 <p className="text-sm text-white">{item.chapter}</p>

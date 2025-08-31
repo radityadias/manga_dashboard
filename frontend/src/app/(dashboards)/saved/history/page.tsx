@@ -1,5 +1,5 @@
 import {PageHeader} from "@/components/page-header";
-import UpdateGrid from "@/components/dashboard/updates/update-grid";
+import PageGrid from "@/components/page-grid";
 
 const historyData = [
     {
@@ -10,11 +10,11 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 12",
-                "releaseTime": "4 hours ago"
+                "releaseTime": "4 hours ago",
+                "scanlation": "Aether Scans"
             }
         ],
         "author": "Lyra",
-        "scanlation": "Aether Scans"
     },
     {
         "id": 2,
@@ -24,21 +24,23 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 25",
-                "releaseTime": "15 minutes ago"
+                "releaseTime": "15 minutes ago",
+                "scanlation": "Blade Scans",
             },
             {
                 "language": "English",
                 "chapter": "Chapter 26",
-                "releaseTime": "15 minutes ago"
+                "releaseTime": "15 minutes ago",
+                "scanlation": "Blade Scans",
             },
             {
                 "language": "French",
                 "chapter": "Chapitre 25",
-                "releaseTime": "15 minutes ago"
+                "releaseTime": "15 minutes ago",
+                "scanlation": "Blade Scans",
             }
         ],
         "author": "Kaito",
-        "scanlation": "Blade Scans"
     },
     {
         "id": 3,
@@ -48,11 +50,11 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 42",
-                "releaseTime": "1 day ago"
+                "releaseTime": "1 day ago",
+                "scanlation": "Echo Translators"
             }
         ],
         "author": "Elian",
-        "scanlation": "Echo Translators"
     },
     {
         "id": 4,
@@ -62,11 +64,11 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 9",
-                "releaseTime": "3 hours ago"
+                "releaseTime": "3 hours ago",
+                "scanlation": "Cyber-Team"
             }
         ],
         "author": "Neo",
-        "scanlation": "Cyber-Team"
     },
     {
         "id": 5,
@@ -76,16 +78,17 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 91",
-                "releaseTime": "2 days ago"
+                "releaseTime": "2 days ago",
+                "scanlation": "Star Scans",
             },
             {
                 "language": "Spanish",
                 "chapter": "Capítulo 91",
-                "releaseTime": "2 days ago"
+                "releaseTime": "2 days ago",
+                "scanlation": "Star Scans",
             }
         ],
         "author": "Celeste",
-        "scanlation": "Star Scans"
     },
     {
         "id": 6,
@@ -95,11 +98,11 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 112",
-                "releaseTime": "1 hour ago"
+                "releaseTime": "1 hour ago",
+                "scanlation": "Labyrinth Scans",
             }
         ],
         "author": "Corvus",
-        "scanlation": "Labyrinth Scans"
     },
     {
         "id": 7,
@@ -109,16 +112,17 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 35",
-                "releaseTime": "6 days ago"
+                "releaseTime": "6 days ago",
+                "scanlation": "Guardian Scans"
             },
             {
                 "language": "German",
                 "chapter": "Kapitel 35",
-                "releaseTime": "6 days ago"
+                "releaseTime": "6 days ago",
+                "scanlation": "Guardian Scans"
             }
         ],
         "author": "Dante",
-        "scanlation": "Guardian Scans"
     },
     {
         "id": 8,
@@ -128,11 +132,11 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 60",
-                "releaseTime": "10 hours ago"
+                "releaseTime": "10 hours ago",
+                "scanlation": "Forest Scans"
             }
         ],
         "author": "Willow",
-        "scanlation": "Forest Scans"
     },
     {
         "id": 9,
@@ -142,11 +146,11 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 55",
-                "releaseTime": "3 days ago"
+                "releaseTime": "3 days ago",
+                "scanlation": "Rune Translators"
             }
         ],
         "author": "Fiora",
-        "scanlation": "Rune Translators"
     },
     {
         "id": 10,
@@ -156,24 +160,25 @@ const historyData = [
             {
                 "language": "English",
                 "chapter": "Chapter 70",
-                "releaseTime": "5 days ago"
+                "releaseTime": "5 days ago",
+                "scanlation": "Rift Scans"
             },
             {
                 "language": "Russian",
                 "chapter": "Глава 70",
-                "releaseTime": "5 days ago"
+                "releaseTime": "5 days ago",
+                "scanlation": "Rift Scans"
             }
         ],
         "author": "Zephyr",
-        "scanlation": "Rift Scans"
     }
 ];
 
 export default function HistoryPage() {
     return (
         <>
-            <PageHeader children="History"/>
-            <UpdateGrid data={historyData}/>
+            <PageHeader children="History" />
+            <PageGrid className="grid-rows-10" card="full" data={historyData} />
         </>
     )
 }

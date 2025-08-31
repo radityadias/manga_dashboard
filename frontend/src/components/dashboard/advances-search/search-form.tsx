@@ -1,13 +1,20 @@
 "use client"
 
+// State
 import {useState} from "react";
-import {ChevronDownIcon, ChevronUpIcon} from "lucide-react";
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import {Button} from "@/components/ui/button";
+
+// Forms
+import {useForm} from "react-hook-form"
+import {zodResolver} from "@hookform/resolvers/zod"
+import {z} from "zod"
+
+// Components
 import SearchBar from "@/components/dashboard/advances-search/search-bar";
 import AdvanceFilters from "@/components/dashboard/advances-search/advance-filters";
+import {Button} from "@/components/ui/button";
+
+// Icons
+import {ChevronDownIcon, ChevronUpIcon} from "lucide-react";
 
 const formSchema = z.object({
     query: z.string(),
