@@ -1,3 +1,7 @@
+"use client"
+
+import { useEffect } from "react";
+import { useDashboardStore } from "@/store/useDashboardStore";
 import {PageHeader} from "@/components/page-header";
 import PageGrid from "@/components/page-grid";
 
@@ -169,6 +173,14 @@ const updatesData = [
 ]
 
 export default function TitleLatestUpdatesPage() {
+    const {manga, loading, error, fetchManga} = useDashboardStore();
+
+     useEffect(() => {
+         fetchManga()
+     }, [fetchManga]);
+
+     console.log(manga)
+
     return (
         <>
             <PageHeader children="Latest Updates"/>
